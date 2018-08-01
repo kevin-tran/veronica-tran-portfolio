@@ -42,12 +42,22 @@ class Nav extends React.Component {
                     <Link to='/fun'>Fun</Link>
                 </div>
 
+                <div className={styles.mobileNav}>
+                    <Button>Menu</Button>
+                </div>
+
+                <div className={styles.mobileNavItems}>
+                    <Link to='/info'>Info</Link>
+                    <Link to='/projects'>Projects</Link>
+                    <Link to='/fun'>Fun</Link>
+                </div>
+
                 <div className={styles.socialLinks}>
                     <p>Graphic + Digital Designer</p>
                     <Fragment>
-                    <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>
-                    <Button link='https://www.linkedin.com/in/veronica-tran' target='_blank' rel='noopener'>LinkedIn</Button>
-                    <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
+                        <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>
+                        <Button link='https://www.linkedin.com/in/veronica-tran' target='_blank' rel='noopener'>LinkedIn</Button>
+                        <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
                     </Fragment>
                 </div>
             </div>
