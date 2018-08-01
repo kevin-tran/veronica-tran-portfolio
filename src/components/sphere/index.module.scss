@@ -1,0 +1,7 @@
+.container {
+    position: static;
+    z-index: 0;
+    overflow: auto;
+    opacity: 1;
+    will-change: opacity;
+}
