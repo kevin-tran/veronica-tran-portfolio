@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import Footer from '../components/footer'
+import Sphere from '../components/sphere'
 import Nav from '../components/nav'
 
 import './index.scss'
 
 const Layout = ({ children }) => (
   <Fragment>
+    <Sphere />
     <Header />
     <Nav />
       {children()}
-    <Footer />
   </Fragment>
 )
 
