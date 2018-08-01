@@ -13,7 +13,9 @@ const Layout = ({ children }) => (
     <Sphere />
     <Header />
     <Nav />
+    <main>
       {children()}
+    </main>
   </Fragment>
 )
 

@@ -8,7 +8,7 @@ const Header = ({ data }) => (
   <Helmet
       htmlAttributes={{
         lang: config.siteLanguage,
-        prefix: "og: http://ogp.me/ns#"
+        prefix: "og:http://ogp.me/ns#"
       }}
       title={config.siteTitle}>
       <meta name="Veronica Tran" content="Portfolio" />
