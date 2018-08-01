@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import SceneSubject from './SceneSubject';
-import GeneralLights from './GeneralLights';
+import SceneSubject from './sceneSubject';
+import GeneralLights from './generalLights';
 
 export default canvas => {
 
