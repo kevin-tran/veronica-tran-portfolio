@@ -42,11 +42,11 @@ class Nav extends React.Component {
                     <Link to='/fun'>Fun</Link>
                 </div>
 
-                <div className={styles.mobileNav}>
+                <div className={styles.mobileNav} onClick={this.handleClick}>
                     <Button>Menu</Button>
                 </div>
 
-                <div className={styles.mobileNavItems}>
+                <div className={open ? styles.mobileNavItemsOpen : styles.mobileNavItems}>
                     <Link to='/info'>Info</Link>
                     <Link to='/projects'>Projects</Link>
                     <Link to='/fun'>Fun</Link>
