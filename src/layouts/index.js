@@ -1,16 +1,13 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import Sphere from '../components/sphere'
 import Nav from '../components/nav'
 
 import './index.scss'
 
 const Layout = ({ children }) => (
   <Fragment>
-    <Sphere />
     <Header />
     <Nav />
     <main>

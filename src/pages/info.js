@@ -1,9 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
+
+import styles from './info.module.scss'
 
 const InfoPage = ({ transition }) => (
   <div style={transition && transition.style}>
-    <h1>xd?</h1>
+    <div className={styles.infoContainer}>
+    <p>I craft compelling design solutions, rooted in conceptual ideas combined with distilled aesthetics. I work across digital, publications, exhibitions, identities, typefaces and more.</p>
+    <p>I'm interested in the intersections of art, design, media, popular culture and technology.</p>
+    </div>
   </div>
 )
 

@@ -24,7 +24,7 @@ class Nav extends React.Component {
         const { open } = this.state;
 
         return (
-            <div className={styles.nav}>
+            <nav className={styles.nav}>
                 <div className={styles.topLeft}>
                     <Button link='/'><b>Veronica Tran</b></Button>
                 </div>
@@ -60,7 +60,7 @@ class Nav extends React.Component {
                         <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
                     </Fragment>
                 </div>
-            </div>
+            </nav>
         );
     }
 }

@@ -9,6 +9,7 @@
 }
 
 .topLeft, .bottomRight, .topRight, .navLinks, .socialLinks {
+    will-change: opacity;
     animation: slideIn 1.5s;
 }
 

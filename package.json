@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Kevin Tran <kevintranvs@outlook.com>",
   "dependencies": {
-    "fontfaceobserver": "^2.0.13",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-google-analytics": "^1.0.31",
@@ -15,8 +14,7 @@
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-webpack-bundle-analyzer": "^0.1.1",
     "react-helmet": "^5.2.0",
-    "react-transition-group": "^2.4.0",
-    "three": "^0.95.0"
+    "react-transition-group": "^2.4.0"
   },
   "keywords": [
     "gatsby"
