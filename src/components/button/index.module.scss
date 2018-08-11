@@ -3,7 +3,9 @@
     color: #000;
     opacity: 1;
 
+    transition: font-weight .1s ease-in-out;
+
     &:hover {
-        font-weight: 600;
+        text-decoration: underline;
     }
 }

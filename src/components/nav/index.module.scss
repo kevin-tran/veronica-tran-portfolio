@@ -1,16 +1,18 @@
 .nav {
+    display: inline-block;
     position: relative;
     pointer-events: auto;
     opacity: 1;
-    width: 100%;
+    width: 20em;
     height: 100%;
-    z-index: 100;
+    z-index: 1;
     transition: opacity 500ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
 }
 
 .topLeft, .bottomRight, .topRight, .navLinks, .socialLinks {
     will-change: opacity;
     animation: slideIn 1.5s;
+    z-index: 100;
 }
 
 .topLeft {
@@ -62,6 +64,10 @@
 
 .mobileNavItemsOpen {
     display: block;
+}
+
+.activeLink {
+    font-weight: 600;
 }
 
 @media only screen and (min-width: '768px') {

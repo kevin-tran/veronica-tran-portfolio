@@ -1,9 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Slider from '../components/slider'
+
+import styles from './info.module.scss'
 
 const FunPage = ({ transition }) => (
   <div style={transition && transition.style}>
-    <h1>Fun?</h1>
+    <div style={{ height: `22.7em` }}>
+      <Slider />
+    </div>
   </div>
 )
 

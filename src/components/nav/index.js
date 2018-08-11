@@ -24,32 +24,10 @@ class Nav extends React.Component {
         const { open } = this.state;
 
         return (
+            <Fragment>
             <nav className={styles.nav}>
                 <div className={styles.topLeft}>
                     <Button link='/'><b>Veronica Tran</b></Button>
-                </div>
-
-                <div className={styles.bottomRight}>
-                    <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
-                </div>
-
-                <div className={styles.topRight}>
-                    <Link to='/info'>Info</Link>
-                </div>
-
-                <div className={styles.navLinks}>
-                    <Link to='/projects'>Projects</Link>
-                    <Link to='/fun'>Fun</Link>
-                </div>
-
-                <div className={styles.mobileNav} onClick={this.handleClick}>
-                    <Button>Menu</Button>
-                </div>
-
-                <div className={open ? styles.mobileNavItemsOpen : styles.mobileNavItems}>
-                    <Link to='/info'>Info</Link>
-                    <Link to='/projects'>Projects</Link>
-                    <Link to='/fun'>Fun</Link>
                 </div>
 
                 <div className={styles.socialLinks}>
@@ -61,6 +39,29 @@ class Nav extends React.Component {
                     </Fragment>
                 </div>
             </nav>
+            <div className={styles.bottomRight}>
+                <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
+            </div>
+
+            <div className={styles.topRight}>
+                <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
+            </div>
+
+            <div className={styles.navLinks}>
+                <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
+                <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
+            </div>
+
+            <div className={styles.mobileNav} onClick={this.handleClick}>
+                <Button>Menu</Button>
+            </div>
+
+            <div className={open ? styles.mobileNavItemsOpen : styles.mobileNavItems}>
+                <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
+                <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
+                <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
+            </div>
+            </Fragment>
         );
     }
 }

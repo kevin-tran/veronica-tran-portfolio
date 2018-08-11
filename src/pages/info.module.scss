@@ -2,3 +2,15 @@
     max-width: 23em;
     line-height: 1.6;
 }
+
+.table {
+    padding-top: 1em;
+
+    td:not(:first-child) {
+        padding-left: 2.2em;
+    }
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
