@@ -11,13 +11,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-next',
     {
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-      options: {
-        analyzerPort: 3000,
-        production: true
-      }
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.manifestName,
