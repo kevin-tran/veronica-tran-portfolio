@@ -13,7 +13,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 6em 2em;
+    padding: 6em 2em 6em 22em;
     z-index: 2;
 }
 
@@ -23,5 +23,15 @@ a {
 
     &:hover {
         font-weight: 600;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (min-width: '1800px') {
+    main {
+        padding: 6em 22em;
     }
 }

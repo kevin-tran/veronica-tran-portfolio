@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './info.module.scss'
 
 const InfoPage = ({ transition }) => (
-  <div style={transition && transition.style}>
+  <div style={transition && transition.style} className={styles.transitionContainer}>
     <section>
       <div className={styles.infoContainer}>
         <p>I craft compelling design solutions, rooted in conceptual ideas combined with distilled aesthetics. I work across digital, publications, exhibitions, identities, typefaces and more.</p>
@@ -11,6 +11,7 @@ const InfoPage = ({ transition }) => (
       </div>
 
       <table className={styles.table}>
+      <tbody>
         <tr>
           <td>
             2018 -
@@ -49,6 +50,7 @@ const InfoPage = ({ transition }) => (
           </td>
           <td>Communication Design at RMIT</td>
         </tr>
+        </tbody>
       </table>
     </section>
 

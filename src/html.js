@@ -37,7 +37,7 @@ module.exports = class HTML extends React.Component {
           <div
             key={`body`}
             id="___gatsby"
-            style={{ width: '100%', position: 'absolute', height: '100%', display: 'flex'}}
+            style={{ width: '100%', position: 'absolute', height: '100%', display: 'flex', overflow: 'auto'}}
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}

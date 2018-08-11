@@ -1,0 +1,27 @@
+.projectContainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto -1.5em;
+}
+
+.projectCard {
+    flex-basis: 100%;
+    margin: 1.5em;
+    height: 25em;
+    background-color: #eee;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: '1440px') {
+    .projectCard {
+        flex-basis: calc(50% - 3em);
+        height: 30em;
+
+        &:first-child {
+            margin-top: 1.5em;
+        }
+    }
+}
