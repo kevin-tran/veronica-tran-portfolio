@@ -1,8 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import bombImage from './images/bomb.svg';
-import flagImage from './images/flag.svg';
+
 import styles from './index.module.scss'
 
 class Cell extends Component {

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 import Settings from '../settings';
-import Timer from '../timer';
+
 import styles from './index.module.scss';
 
 class Controls extends Component {
