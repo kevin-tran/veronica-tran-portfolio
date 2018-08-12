@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* globals window CustomEvent */
 import React, { createElement } from 'react'
 import { Transition } from 'react-transition-group'
 import { Router } from 'react-router-dom'
@@ -91,7 +89,7 @@ exports.replaceComponentRenderer = ({ props, loader }) => {
 }
 
 exports.replaceRouterComponent = ({ history }) => {
-  const store = createStore();
+  const store = createStore()
 
   const ConnectedRouterWrapper = ({ children }) => (
     <Provider store={store}>
