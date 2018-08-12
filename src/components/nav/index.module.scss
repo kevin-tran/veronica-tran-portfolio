@@ -17,27 +17,27 @@
 
 .topLeft {
     position: absolute;
-    top: 2em;
-    left: 2em;
+    top: 1.2em;
+    left: 1.2em;
 }
 
 .bottomRight {
     position: absolute;
-    bottom: 2em;
-    right: 2em;
+    bottom: 1.2em;
+    right: 1.2em;
 }
 
 .topRight, .mobileNav {
     position: absolute;
     display: none;
-    right: 2em;
-    top: 2em;
+    right: 1.2em;
+    top: 1.2em;
 }
 
 .navLinks {
     position: absolute;
     display: none;
-    top: 2em;
+    top: 1.2em;
 
     >*:not(:first-child) {
         padding: 0 1em;
@@ -46,11 +46,11 @@
 
 .socialLinks {
     position: absolute;
-    left: 2em;
+    left: 1.2em;
     bottom: 60%;
 
     >*:first-child {
-        padding-bottom: 2em;
+        padding-bottom: 1.2em;
     }
 }
 
@@ -97,7 +97,7 @@
 @media only screen and (min-width: '1400px') {
 
     .bottomRight {
-        right: 2em;
+        right: 1.2em;
     }
 }
 

@@ -1,7 +1,7 @@
 .projectContainer {
     display: flex;
     flex-flow: row wrap;
-    margin: auto -1.5em;
+    margin-left: -1.5em;
 }
 
 .projectCard {
@@ -9,6 +9,8 @@
     margin: 1.5em;
     height: 25em;
     background-color: #eee;
+    background-size: cover;
+    background-position: center;
 
     &:first-child {
         margin-top: 0;
@@ -17,7 +19,7 @@
 
 @media only screen and (min-width: '1440px') {
     .projectCard {
-        flex-basis: calc(50% - 3em);
+        flex-basis: calc(42% - 3em);
         height: 30em;
 
         &:first-child {
