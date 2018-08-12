@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Cell from '../cell';
 
-class Board extends Component {
+import styles from './index.module.scss';
+
+class BoardComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -26,7 +28,7 @@ class Board extends Component {
 
   render() {
     return (
-      <div onContextMenu={this.handleContextMenu}>
+      <div onContextMenu={this.handleContextMenu} className={styles.boardContainer}>
         {this.props.board &&
           this.props.board.map((row, idx) => {
             return (
@@ -55,7 +57,7 @@ class Board extends Component {
   }
 }
 
-Board.defaultProps = {
+BoardComponent.defaultProps = {
   onMouseDown() {},
   onMouseUp() {},
   isGameOver: false,
@@ -65,7 +67,7 @@ Board.defaultProps = {
   rows: 9
 };
 
-Board.propTypes = {
+BoardComponent.propTypes = {
   rows: PropTypes.number,
   columns: PropTypes.number,
   mineCount: PropTypes.number,
@@ -77,4 +79,4 @@ Board.propTypes = {
   className: PropTypes.string
 };
 
-export default Board;
+export default BoardComponent;

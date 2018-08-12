@@ -1,51 +1,57 @@
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import * as appActionCreators from '../../../state/actions/app';
-import './styles.css';
+
+import styles from './index.module.scss';
 
 class Settings extends Component {
   constructor(props) {
     super(props);
 
-    this.handleClose = this.handleClose.bind(this);
+    this.state = {
+      showSettings: false
+    };
+
+    this.handleSettings = this.handleSettings.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleSettings(_event) {
+    this.setState({
+      showSettings: !this.state.showSettings
+    });
   }
 
   handleChange(difficulty) {
     this.props.appActions.updateDifficulty(difficulty);
   }
 
-  handleClose() {
-    this.props.onClose();
-  }
-
   render() {
+    const {
+      isOpening,
+      onReset,
+    } = this.props;
+
     return (
-      <div>
-        {this.props.isOpen &&
-          <div className="settings">
-            <h2>Settings</h2>
-            <div className="settings__section settings__difficulty">
-              <h3>Difficulty</h3>
-              {['easy', 'medium', 'hard'].map((difficulty, idx) => {
-                return (
-                  <label key={idx}>
-                    <input
-                      type="radio"
-                      name="difficulty"
-                      onChange={() => this.handleChange(difficulty)}
-                      checked={difficulty === this.props.difficulty}
-                    />
-                    {difficulty}
-                  </label>
-                );
-              })}
-            </div>
-            <button className="primary" onClick={this.handleClose}>
-              Close
-            </button>
-          </div>}
+      <div className={styles.relative}>
+      <div className={styles.titleBar} />
+          <p
+            className={styles.settingsButton}
+            onClick={this.handleSettings}>
+            Game
+          </p>
+        {this.state.showSettings &&
+          <ul className={styles.settings}>
+          <li onClick={() => { onReset(); this.setState({ showSettings: false });}}>New</li>
+          <li className={styles.menuDivider} />
+              <li onClick={() => { this.handleChange('easy'); this.setState({ showSettings: false });}}>Beginner</li>
+              <li onClick={() => { this.handleChange('medium'); this.setState({ showSettings: false });}}>Intermediate</li>
+              <li onClick={() => { this.handleChange('hard'); this.setState({ showSettings: false });}}>Expert</li>
+          </ul>
+        }
       </div>
     );
   }
@@ -63,15 +69,20 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
+Settings.defaultProps = {
+  onReset() {},
+  onClose() {},
+  isOpening: false
+};
+
 Settings.propTypes = {
+  onReset: PropTypes.func,
+  isTicking: PropTypes.bool,
+  isOpening: PropTypes.bool,
   difficulty: PropTypes.string,
   appActions: PropTypes.object,
   onClose: PropTypes.func,
   isOpen: PropTypes.bool
-};
-
-Settings.defaultProps = {
-  onClose() {}
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Settings);

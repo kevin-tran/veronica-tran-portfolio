@@ -1,0 +1,47 @@
+.relative {
+    position: relative;
+}
+
+.titleBar {
+    background: #3d95ff url('../minesweeper.png') no-repeat;
+    background-position: 0 -84px;
+    height: 25px;
+}
+
+.settingsButton {
+    display: inline-block;
+    cursor: pointer;
+    padding: .3em;
+    margin: 0;
+    font-size: 14px;
+}
+
+.settings {
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    width: 122px;
+    margin: 0;
+    padding: 2px;
+    background: #fff;
+    border: 1px solid #aca899;
+    font: 12px arial;
+
+    li {
+        display: block;
+        margin: 0;
+        padding: 4px 5px 4px 16px;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .menuDivider {
+        font-size: 0;
+        line-height: 0;
+        height: 0;
+        border-bottom: 1px solid #aca899;
+        margin: 5px 1px;
+        padding: 0;
+    }
+}

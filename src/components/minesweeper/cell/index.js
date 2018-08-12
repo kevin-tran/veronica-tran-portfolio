@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import bombImage from './images/bomb.svg';
 import flagImage from './images/flag.svg';
-import './styles.css';
+import styles from './index.module.scss'
 
 class Cell extends Component {
   constructor(props) {
@@ -26,38 +26,22 @@ class Cell extends Component {
     } = this.props;
 
     const className = classNames({
-      cell: true,
-      cell__opened: isOpened,
-      cell__closed: !isOpened,
-      cell__exploded: isOpened && hasMine
+      [styles.cell]: true,
+      [styles.cellOpened]: isOpened,
+      [styles.cellClosed]: !isOpened,
+      [styles.cellExploded]: isOpened && hasMine,
+      [styles.bomb]: isGameOver && hasMine && !isOpened,
+      [styles[`cell${neighborMineCount}`]]: isOpened && !hasMine && neighborMineCount > 0
     });
 
     return (
-      <button
+      <div
         className={className}
         onBlur={this.props.onBlur}
         onFocus={this.handleFocus}
         onClick={this.props.onClick}
         onMouseUp={this.props.onBlur}
-        onContextMenu={this.props.onFlag}
-      >
-        <div className="cell__face cell__face__front">
-          {!isOpened &&
-            hasFlag &&
-            !isGameOver &&
-            <img src={flagImage} alt="flag" />}
-        </div>
-        <div className="cell__face cell__face__back">
-          {isOpened &&
-            !hasMine &&
-            neighborMineCount > 0 &&
-            <span className={`cell__count-${neighborMineCount}`}>
-              {neighborMineCount}
-            </span>}
-          {((hasMine && isOpened) || (hasMine && isGameOver)) &&
-            <img src={bombImage} alt="bomb" />}
-        </div>
-      </button>
+        onContextMenu={this.props.onFlag} />
     );
   }
 }

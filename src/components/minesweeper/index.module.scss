@@ -1,0 +1,34 @@
+.container {
+    width: 171px;
+    border: 1px solid;
+    border-color: #f1efe2 #716f64 #716f64 #f1efe2;
+}
+
+.containerMedium {
+    composes: container;
+    width: 283px;
+}
+
+.containerLarge {
+    composes: container;
+    width: 507px;
+}
+
+.containerInner {
+    border: 1px solid;
+    border-color: #fff #aca899 #aca899 #fff;
+}
+
+.containerWindow {
+    position: relative;
+    background-color: #ece9d8;
+    padding: 1px;
+}
+
+.containerBoard {
+    position: relative;
+    background-color: #bdbdbd;
+    padding: 7px;
+    border-left: 3px solid #fff;
+    border-top: 3px solid #fff;
+}

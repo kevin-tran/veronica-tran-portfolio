@@ -4,9 +4,12 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import * as appActionCreators from '../../state/actions/app';
-import Toolbar from './toolbar';
+
+import Settings from './settings';
 import BoardContainer from './board';
-import './index.module.scss';
+import Controls from './controls';
+
+import styles from './index.module.scss';
 
 const TASK = Symbol();
 
@@ -70,26 +73,31 @@ class Minesweeper extends Component {
       hasWon,
       mineCount,
       minesLeft,
-      timeSpent
+      timeSpent,
+      difficulty
     } = this.props;
     const { isOpening } = this.state;
     const className = classNames({
-      app: true,
       app__is_ticking: isTicking
     });
 
     return (
-      <div className={className}>
-        <Toolbar
-          hasWon={hasWon}
+      <div className={difficulty === 'easy' ? styles.container : difficulty === 'medium' ? styles.containerMedium : styles.containerLarge}>
+      <div className={styles.containerInner}>
+      <div className={styles.containerWindow}>
+        <Settings
           isOpening={isOpening}
-          isTicking={isTicking}
-          mineCount={mineCount}
-          minesLeft={minesLeft}
-          timeSpent={timeSpent}
           onReset={this.handleReset}
         />
-        <div className="app__container">
+        <div className={styles.containerBoard}>
+        <Controls
+        hasWon={hasWon}
+        isTicking={isTicking}
+        mineCount={mineCount}
+        minesLeft={minesLeft}
+        timeSpent={timeSpent}
+        onReset={this.handleReset}
+      />
           <BoardContainer
             mineCount={mineCount}
             isTicking={isTicking}
@@ -98,6 +106,8 @@ class Minesweeper extends Component {
             onMouseDown={this.handleCellFocus}
           />
         </div>
+        </div>
+      </div>
       </div>
     );
   }
@@ -121,7 +131,8 @@ function mapStateToProps(state) {
     mineCount: state.get('mineCount'),
     isTicking: state.get('isTicking'),
     minesLeft: state.get('minesLeft'),
-    isGameOver: state.get('isGameOver')
+    isGameOver: state.get('isGameOver'),
+    difficulty: state.get('difficulty')
   };
 }
 

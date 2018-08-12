@@ -1,0 +1,52 @@
+.cell {
+  width: 16px;
+  height: 16px;
+  background: url('../minesweeper.png') no-repeat;
+  background-position: 0 -39px;
+  float: left;
+  cursor: pointer;
+}
+
+.cellOpened {
+  background-position: 0 -23px;
+}
+
+.cellClosed {
+  background-position: 0 -39px;
+}
+
+.cellExploded {
+  background-position: -32px -39px;
+}
+
+.cell1 {
+  background-position: -16px -23px;
+}
+
+.cell2 {
+  background-position: -32px -23px;
+}
+
+.cell3 {
+  background-position: -48px -23px;
+}
+
+.cell4 {
+  background-position: -64px -23px;
+}
+
+.bomb {
+  background: url('../minesweeper.png') no-repeat;
+  background-position: -64px -39px;
+  float: left;
+  width: 16px;
+  height: 16px;
+}
+
+.bombHit {
+  background: url('../minesweeper.png') no-repeat;
+  background-position: -32px -39px;
+  float: left;
+  width: 16px;
+  height: 16px;
+}
