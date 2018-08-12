@@ -8,6 +8,13 @@
     height: 25px;
 }
 
+.closeButton {
+    background: #3d95ff url('../buttons.png') no-repeat;
+    background-position: 0 0;
+    height: 25px;
+    float: right;
+}
+
 .settingsButton {
     display: inline-block;
     cursor: pointer;

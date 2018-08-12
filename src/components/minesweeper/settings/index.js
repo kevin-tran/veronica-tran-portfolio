@@ -37,7 +37,9 @@ class Settings extends Component {
 
     return (
       <div className={styles.relative}>
-      <div className={styles.titleBar} />
+      <div className={styles.titleBar}>
+      <div className={styles.closeButton} />
+      </div>
           <p
             className={styles.settingsButton}
             onClick={this.handleSettings}>

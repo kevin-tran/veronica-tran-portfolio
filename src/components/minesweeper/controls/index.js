@@ -18,7 +18,6 @@ class Controls extends Component {
 
     const mineDigits = minesLeft.toString().split('');
     const timeDigits = timeSpent.toString().split('');
-    console.log(timeDigits.length);
 
     return (
     <div className={styles.controlsPadding}>

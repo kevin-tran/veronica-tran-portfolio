@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
+import Draggable from 'react-draggable';
+
 import * as appActionCreators from '../../state/actions/app';
 
 import Settings from './settings';
@@ -82,6 +84,7 @@ class Minesweeper extends Component {
     });
 
     return (
+      <Draggable>
       <div className={difficulty === 'easy' ? styles.container : difficulty === 'medium' ? styles.containerMedium : styles.containerLarge}>
       <div className={styles.containerInner}>
       <div className={styles.containerWindow}>
@@ -109,6 +112,7 @@ class Minesweeper extends Component {
         </div>
       </div>
       </div>
+      </Draggable>
     );
   }
 }

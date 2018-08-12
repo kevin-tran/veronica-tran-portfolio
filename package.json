@@ -16,6 +16,7 @@
     "gatsby-plugin-webpack-bundle-analyzer": "^0.1.1",
     "immutable": "^3.8.2",
     "prop-types": "^15.6.2",
+    "react-draggable": "^3.0.5",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
     "react-scroll-horizontal": "^1.5.1",

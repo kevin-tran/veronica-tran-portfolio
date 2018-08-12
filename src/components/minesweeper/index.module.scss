@@ -1,7 +1,9 @@
 .container {
+    display: inline-block;
     width: 171px;
     border: 1px solid;
     border-color: #f1efe2 #716f64 #716f64 #f1efe2;
+    z-index: 100;
 }
 
 .containerMedium {
