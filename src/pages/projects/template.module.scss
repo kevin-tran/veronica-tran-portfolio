@@ -1,0 +1,12 @@
+.headerContainer {
+    display: flex;
+
+    >* {
+        flex-basis: 30%;
+    }
+}
+
+.contentContainer {
+    max-width: 20em;
+    margin-right: 2em;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Minesweeper from '../components/minesweeper'
 
 class IndexPage extends React.Component {
 
@@ -7,6 +8,7 @@ class IndexPage extends React.Component {
 
     return (
       <div style={transition && transition.style}>
+      <Minesweeper />
       </div>
     );
   }

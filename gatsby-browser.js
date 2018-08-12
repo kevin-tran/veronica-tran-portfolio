@@ -1,13 +1,17 @@
 /* eslint-disable react/prop-types */
 /* globals window CustomEvent */
-import React, { createElement } from "react"
-import { Transition } from "react-transition-group"
-import createHistory from "history/createBrowserHistory"
+import React, { createElement } from 'react'
+import { Transition } from 'react-transition-group'
+import { Router } from 'react-router-dom'
+import createHistory from 'history/createBrowserHistory'
+import { Provider } from 'react-redux'
 
-import getTransitionStyle from "./src/utils/getTransitionStyle"
+import createStore from './src/state/createStore'
+
+import getTransitionStyle from './src/utils/getTransitionStyle'
 
 const timeout = 250
-const historyExitingEventType = `history::exiting`
+const historyExitingEventType = 'history::exiting'
 
 const getUserConfirmation = (pathname, callback) => {
   const event = new CustomEvent(historyExitingEventType, { detail: { pathname } })
@@ -79,10 +83,21 @@ class ReplaceComponentRenderer extends React.Component {
   }
 }
 
-// eslint-disable-next-line react/display-name
 exports.replaceComponentRenderer = ({ props, loader }) => {
   if (props.layout) {
     return undefined
   }
   return createElement(ReplaceComponentRenderer, { ...props, loader })
+}
+
+exports.replaceRouterComponent = ({ history }) => {
+  const store = createStore();
+
+  const ConnectedRouterWrapper = ({ children }) => (
+    <Provider store={store}>
+      <Router history={history}>{children}</Router>
+    </Provider>
+  );
+
+  return ConnectedRouterWrapper;
 }
