@@ -8,11 +8,86 @@
     height: 25px;
 }
 
-.closeButton {
-    background: #3d95ff url('../buttons.png') no-repeat;
-    background-position: 0 0;
-    height: 25px;
+.buttons {
+    display: flex;
     float: right;
+    padding-top: .2em;
+    padding-right: .2em;
+
+    >* {
+        color: #464147;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-left: 2px;
+        width: 14px;
+        height: 8px;
+        padding: 0;
+        padding-bottom: 10px;
+        border: 0;
+        background: #cac6cb;
+        box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    }
+}
+
+.minimize {
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 6px;
+        left: 4px;
+        width: 6px;
+        height: 2px;
+        background: #464147;
+    }
+}
+
+.maximize {
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5.5px;
+        left: 3px;
+        width: 6px;
+        height: 4px;
+        border: 1px solid #a099a1;
+        border-top-width: 2px;
+    }
+}
+
+.close {
+    &:before {
+        transform: rotateZ(-45deg);
+        transform-origin: center center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -4px;
+        margin-left: -1px;
+        width: 2px;
+        height: 8px;
+        background: #464147;
+    }
+
+    &:after {
+        transform: rotateZ(45deg);
+        transform-origin: center center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -4px;
+        margin-left: -1px;
+        width: 2px;
+        height: 8px;
+        background: #464147;
+    }
 }
 
 .settingsButton {

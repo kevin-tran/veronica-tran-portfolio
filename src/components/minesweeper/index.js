@@ -79,9 +79,6 @@ class Minesweeper extends Component {
       difficulty
     } = this.props;
     const { isOpening } = this.state;
-    const className = classNames({
-      app__is_ticking: isTicking
-    });
 
     return (
       <Draggable>

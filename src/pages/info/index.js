@@ -1,9 +1,10 @@
 import React from 'react'
+import Layout from '../../components/layout'
 
 import styles from './info.module.scss'
 
-const InfoPage = ({ transition }) => (
-  <div style={transition && transition.style} className={styles.transitionContainer}>
+const InfoPage = () => (
+  <Layout className={styles.transitionContainer}>
     <section>
       <div className={styles.infoContainer}>
         <p>I craft compelling design solutions, rooted in conceptual ideas combined with distilled aesthetics. I work across digital, publications, exhibitions, identities, typefaces and more.</p>
@@ -54,7 +55,7 @@ const InfoPage = ({ transition }) => (
       </table>
     </section>
 
-  </div>
+  </Layout>
 )
 
 export default InfoPage

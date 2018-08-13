@@ -1,5 +1,5 @@
 import React from 'react'
-import Link, { withPrefix } from 'gatsby-link'
+import Layout from '../../components/layout'
 
 import styles from './index.module.scss'
 
@@ -15,8 +15,8 @@ import skaThumbnail from './images/thumbnails/ska-feature-thumbnail.png'
 import wikifragsThumbnail from './images/thumbnails/wikifrags-feature-thumbnail.png'
 import cadThumbnail from './images/thumbnails/cad-feature-thumbnail.png'
 
-const ProjectsPage = ({ transition }) => (
-  <div style={transition && transition.style}>
+const ProjectsPage = () => (
+  <Layout>
     <div className={styles.projectContainer}>
       <div className={styles.projectCard} style={{ backgroundImage: `url(${chThumbnail})`}}>
       </div>
@@ -48,7 +48,7 @@ const ProjectsPage = ({ transition }) => (
       <div className={styles.projectCard} style={{ backgroundImage: `url(${cadThumbnail})`}}>
       </div>
       </div>
-  </div>
+  </Layout>
 )
 
 export default ProjectsPage

@@ -31,14 +31,17 @@ class Settings extends Component {
 
   render() {
     const {
-      isOpening,
       onReset,
     } = this.props;
 
     return (
       <div className={styles.relative}>
       <div className={styles.titleBar}>
-      <div className={styles.closeButton} />
+      <div className={styles.buttons}>
+        <div className={styles.minimize}></div>
+        <div className={styles.maximize}></div>
+        <div className={styles.close}></div>
+      </div>
       </div>
           <p
             className={styles.settingsButton}

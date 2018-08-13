@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
-import { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby'
 import config from "../../../config/meta"
 
 const Header = ({ data }) => (
