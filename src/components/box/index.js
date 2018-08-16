@@ -9,8 +9,7 @@ const Box = () => (
         width: 493,
         height: 505,
       }}
-      minWidth={200}
-      minHeight={200}
+      lockAspectRatio
       bounds='window'>
     <svg role='presentation' viewBox='0 0 493 505' preserveAspectRatio='none' height='100%' width='100%'>
     <g stroke='#000' fill='none' fillRule='evenodd'>

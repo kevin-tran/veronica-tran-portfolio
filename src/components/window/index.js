@@ -9,8 +9,7 @@ const WindowSVG = () => (
         width: 474,
         height: 581,
       }}
-      minWidth={200}
-      minHeight={200}
+      lockAspectRatio
       bounds='window'>
     <svg role='presentation' viewBox='0 0 474 581' preserveAspectRatio='none' height='100%' width='100%'>
         <defs>
