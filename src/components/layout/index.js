@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Header from '../header'
 import Nav from '../nav'
-import Minesweeper from '../Minesweeper'
+import Minesweeper from '../minesweeper'
 
 import './index.scss'
 import '../../fonts/space-grotesk-regular.woff2'
