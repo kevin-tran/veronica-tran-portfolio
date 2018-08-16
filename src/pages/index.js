@@ -1,5 +1,7 @@
 import React from 'react'
 import Keyboard from '../components/keyboard'
+import WindowSVG from '../components/window'
+import Box from '../components/box'
 
 class IndexPage extends React.Component {
 
@@ -7,6 +9,8 @@ class IndexPage extends React.Component {
     return (
       <div>
         <Keyboard />
+        <WindowSVG />
+        <Box />
       </div>
     );
   }
