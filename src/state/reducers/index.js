@@ -18,10 +18,12 @@ const initalState = Map({
   timeSpent: 0,
   mineCount: 10,
   minesLeft: 10,
-  gameCount: 0
+  gameCount: 0,
+  windowOpen: true
 });
 
 export default (state = initalState, action) => {
+  console.log(action);
   switch (action.type) {
     case types.CONFIGURE_ROUND:
       return state
@@ -93,7 +95,10 @@ export default (state = initalState, action) => {
       return state
         .setIn(['board', ...cellPosition(action.cell), 'hasFlag'], false)
         .update('minesLeft', minesLeft => ++minesLeft);
-
+    case types.CLOSE_WINDOW:
+      return state.merge({
+        windowOpen: action.windowOpen
+      })
     default:
       return state;
   }

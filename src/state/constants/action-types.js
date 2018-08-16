@@ -8,5 +8,6 @@ export const INCREMENT_TIME = 'INCREMENT_TIME';
 export const REMOVE_FLAG = 'REMOVE_FLAG';
 export const OPEN_CELL = 'OPEN_CELL';
 export const ADD_FLAG = 'ADD_FLAG';
+export const CLOSE_WINDOW ='CLOSE_WINDOW';
 
 export const TOGGLE_DRAWER = 'TOGGLE_DRAWER';

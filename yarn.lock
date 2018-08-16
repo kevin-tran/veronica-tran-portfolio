@@ -7034,6 +7034,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+re-resizable@4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/re-resizable/-/re-resizable-4.7.1.tgz#3eca5bb94a6059d14311786cfd2d430bc9f7fba0"
+
 react-dev-utils@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.1.tgz#9f2763e7bafa1a1b9c52254d2a479deec280f111"
@@ -7066,7 +7070,7 @@ react-dom@^16.4.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-draggable@^3.0.5:
+react-draggable@3.0.5, react-draggable@^3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-3.0.5.tgz#c031e0ed4313531f9409d6cd84c8ebcec0ddfe2d"
   dependencies:
@@ -7119,6 +7123,14 @@ react-redux@^5.0.7:
     lodash-es "^4.17.5"
     loose-envify "^1.1.0"
     prop-types "^15.6.0"
+
+react-rnd@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/react-rnd/-/react-rnd-9.0.1.tgz#7460cac67956fea3718cc8d072d229a1f5bc534c"
+  dependencies:
+    re-resizable "4.7.1"
+    react-draggable "3.0.5"
+    tslib "1.9.3"
 
 react-scroll-horizontal@^1.5.1:
   version "1.5.1"
@@ -8449,7 +8461,7 @@ tryer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
 
-tslib@^1.6.0, tslib@^1.9.0:
+tslib@1.9.3, tslib@^1.6.0, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 

@@ -30,9 +30,8 @@ class BoardComponent extends Component {
     return (
       <div onContextMenu={this.handleContextMenu} className={styles.boardContainer}>
         {this.props.board &&
-          this.props.board.map((row, idx) => {
-            return (
-              <div key={idx}>
+          this.props.board.map((row, idx) => (
+              <div key={idx} className={styles.cellContainer}>
                 {row.map((cell, idx) => {
                   return (
                     <Cell
@@ -50,8 +49,7 @@ class BoardComponent extends Component {
                   );
                 })}
               </div>
-            );
-          })}
+          ))}
       </div>
     );
   }

@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: row wrap;
     margin-left: -1.5em;
+    animation: slideIn 1.5s;
 }
 
 .projectCard {
@@ -25,5 +26,17 @@
         &:first-child {
             margin-top: 1.5em;
         }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }

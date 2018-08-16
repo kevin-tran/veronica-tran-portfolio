@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../../components/layout'
 
 import styles from './index.module.scss'
 
@@ -16,7 +15,6 @@ import wikifragsThumbnail from './images/thumbnails/wikifrags-feature-thumbnail.
 import cadThumbnail from './images/thumbnails/cad-feature-thumbnail.png'
 
 const ProjectsPage = () => (
-  <Layout>
     <div className={styles.projectContainer}>
       <div className={styles.projectCard} style={{ backgroundImage: `url(${chThumbnail})`}}>
       </div>
@@ -48,7 +46,6 @@ const ProjectsPage = () => (
       <div className={styles.projectCard} style={{ backgroundImage: `url(${cadThumbnail})`}}>
       </div>
       </div>
-  </Layout>
 )
 
 export default ProjectsPage

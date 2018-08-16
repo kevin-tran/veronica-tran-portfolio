@@ -30,7 +30,8 @@ class Cell extends Component {
       [styles.cellClosed]: !isOpened,
       [styles.cellExploded]: isOpened && hasMine,
       [styles.bomb]: isGameOver && hasMine && !isOpened,
-      [styles[`cell${neighborMineCount}`]]: isOpened && !hasMine && neighborMineCount > 0
+      [styles[`cell${neighborMineCount}`]]: isOpened && !hasMine && neighborMineCount > 0,
+      [styles.flag]: hasFlag && !isOpened && !isGameOver
     });
 
     return (

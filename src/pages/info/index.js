@@ -1,10 +1,9 @@
-import React from 'react'
-import Layout from '../../components/layout'
+import React, { Fragment } from 'react'
 
 import styles from './info.module.scss'
 
 const InfoPage = () => (
-  <Layout className={styles.transitionContainer}>
+  <Fragment>
     <section>
       <div className={styles.infoContainer}>
         <p>I craft compelling design solutions, rooted in conceptual ideas combined with distilled aesthetics. I work across digital, publications, exhibitions, identities, typefaces and more.</p>
@@ -54,8 +53,7 @@ const InfoPage = () => (
         </tbody>
       </table>
     </section>
-
-  </Layout>
+  </Fragment>
 )
 
 export default InfoPage

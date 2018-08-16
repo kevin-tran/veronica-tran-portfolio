@@ -17,6 +17,7 @@ class Settings extends Component {
 
     this.handleSettings = this.handleSettings.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleSettings(_event) {
@@ -29,6 +30,10 @@ class Settings extends Component {
     this.props.appActions.updateDifficulty(difficulty);
   }
 
+  handleClose(windowOpen) {
+    this.props.appActions.toggleWindow(windowOpen);
+  }
+
   render() {
     const {
       onReset,
@@ -37,13 +42,12 @@ class Settings extends Component {
     return (
       <div className={styles.relative}>
       <div className={styles.titleBar}>
+      Minesweeper
       <div className={styles.buttons}>
-        <div className={styles.minimize}></div>
-        <div className={styles.maximize}></div>
-        <div className={styles.close}></div>
+        <div className={styles.close} onClick={() => this.handleClose(false)}></div>
       </div>
       </div>
-          <p
+          {/* <p
             className={styles.settingsButton}
             onClick={this.handleSettings}>
             Game
@@ -56,7 +60,7 @@ class Settings extends Component {
               <li onClick={() => { this.handleChange('medium'); this.setState({ showSettings: false });}}>Intermediate</li>
               <li onClick={() => { this.handleChange('hard'); this.setState({ showSettings: false });}}>Expert</li>
           </ul>
-        }
+        } */}
       </div>
     );
   }

@@ -69,3 +69,10 @@ export function endGame() {
     type: types.STOP_ROUND
   };
 }
+
+export function toggleWindow(windowOpen) {
+  return {
+    type: types.CLOSE_WINDOW,
+    windowOpen
+  };
+}

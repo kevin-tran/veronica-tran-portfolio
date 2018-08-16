@@ -1,9 +1,3 @@
-.controlsContainer {
-    padding: 3px 5px;
-    border: 2px solid;
-    border-color: #7d7d7d #fff #fff #7d7d7d;
-}
-
 .relativeContainer {
     position: relative;
     overflow: hidden;
@@ -15,16 +9,9 @@
     left: 0;
     top: 1px;
     z-index: 1;
-    border: 1px solid;
-    border-color: #808080 #fff #fff #808080;
-}
-
-.controlsPadding {
-    border-bottom: 7px solid #bdbdbd;
 }
 
 .resetButton {
-    background: url('../minesweeper.png') no-repeat;
     cursor: pointer;
     background-position: 0 -55px;
     height: 26px;
@@ -41,64 +28,5 @@
     position: absolute;
     top: 1px;
     z-index: 1;
-    border: 1px solid;
-    border-color: #808080 #fff #fff #808080;
     right: 0;
-}
-
-.number {
-    width: 13px;
-    height: 23px;
-    float: left;
-    background: url('../minesweeper.png') no-repeat;
-}
-
-.number0 {
-    composes: number;
-    background-position: 0 0;
-}
-
-.number1 {
-    composes: number;
-    background-position: -13px 0;
-}
-
-.number2 {
-    composes: number;
-    background-position: -26px 0;
-}
-
-.number3 {
-    composes: number;
-    background-position: -39px 0;
-}
-
-.number4 {
-    composes: number;
-    background-position: -52px 0;
-}
-
-.number5 {
-    composes: number;
-    background-position: -65px 0;
-}
-
-.number6 {
-    composes: number;
-    background-position: -78px 0;
-}
-
-.number7 {
-    composes: number;
-    background-position: -91px 0;
-}
-
-.number8 {
-    composes: number;
-    background-position: -104px 0;
-}
-
-.number9 {
-    composes: number;
-    background-position: -117px 0;
 }

@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
-import Draggable from 'react-draggable';
+import { Rnd } from 'react-rnd';
 
 import * as appActionCreators from '../../state/actions/app';
 
@@ -29,7 +28,7 @@ class Minesweeper extends Component {
     this.handleCellFocus = this.handleCellFocus.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (!this.props.isTicking && nextProps.isTicking) {
       clearInterval(this[TASK]);
       this[TASK] = setInterval(this.tick, 1000);
@@ -76,40 +75,53 @@ class Minesweeper extends Component {
       mineCount,
       minesLeft,
       timeSpent,
-      difficulty
+      difficulty,
+      windowOpen
     } = this.props;
     const { isOpening } = this.state;
 
     return (
-      <Draggable>
-      <div className={difficulty === 'easy' ? styles.container : difficulty === 'medium' ? styles.containerMedium : styles.containerLarge}>
-      <div className={styles.containerInner}>
-      <div className={styles.containerWindow}>
-        <Settings
-          isOpening={isOpening}
-          onReset={this.handleReset}
-        />
-        <div className={styles.containerBoard}>
-        <Controls
-        hasWon={hasWon}
-        isTicking={isTicking}
-        mineCount={mineCount}
-        minesLeft={minesLeft}
-        timeSpent={timeSpent}
-        onReset={this.handleReset}
-      />
-          <BoardContainer
-            mineCount={mineCount}
-            isTicking={isTicking}
-            isGameOver={isGameOver}
-            onMouseUp={this.handleCellBlur}
-            onMouseDown={this.handleCellFocus}
-          />
-        </div>
-        </div>
-      </div>
-      </div>
-      </Draggable>
+      <Rnd
+      default={{
+        x: 500,
+        y: 400,
+        width: 600,
+        height: 500,
+      }}
+      minWidth={200}
+      minHeight={260}
+      bounds="window"
+    >
+        {windowOpen ?
+          <div className={styles.container}>
+            <div className={styles.containerInner}>
+              <div className={styles.containerWindow}>
+                <Settings
+                  isOpening={isOpening}
+                  onReset={this.handleReset}
+                />
+                <div className={styles.containerBoard}>
+                  <Controls
+                    hasWon={hasWon}
+                    isTicking={isTicking}
+                    mineCount={mineCount}
+                    minesLeft={minesLeft}
+                    timeSpent={timeSpent}
+                    onReset={this.handleReset}
+                  />
+                  <BoardContainer
+                    mineCount={mineCount}
+                    isTicking={isTicking}
+                    isGameOver={isGameOver}
+                    onMouseUp={this.handleCellBlur}
+                    onMouseDown={this.handleCellFocus}
+                  />
+                </div>
+              </div>
+            </div>
+          </div> : <div></div>
+        }
+      </Rnd>
     );
   }
 }
@@ -133,7 +145,8 @@ function mapStateToProps(state) {
     isTicking: state.get('isTicking'),
     minesLeft: state.get('minesLeft'),
     isGameOver: state.get('isGameOver'),
-    difficulty: state.get('difficulty')
+    difficulty: state.get('difficulty'),
+    windowOpen: state.get('windowOpen')
   };
 }
 

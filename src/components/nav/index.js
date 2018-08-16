@@ -27,7 +27,7 @@ class Nav extends React.Component {
             <Fragment>
             <nav className={styles.nav}>
                 <div className={styles.topLeft}>
-                    <Button link='/'><b>Veronica Tran</b></Button>
+                    <Button link='/'>Veronica Tran</Button>
                 </div>
 
                 <div className={styles.socialLinks}>

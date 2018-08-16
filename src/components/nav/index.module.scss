@@ -5,13 +5,14 @@
     opacity: 1;
     width: 22em;
     height: 100%;
-    z-index: 3;
+    z-index: 0;
     transition: opacity 500ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
 }
 
 .topLeft, .bottomRight, .topRight, .navLinks, .socialLinks {
     will-change: opacity;
     z-index: 100;
+    animation: slideIn 1.5s;
 }
 
 .topLeft {
@@ -39,7 +40,7 @@
     top: 1.2em;
 
     >*:not(:first-child) {
-        padding: 0 1em;
+        margin: 0 1em;
     }
 }
 

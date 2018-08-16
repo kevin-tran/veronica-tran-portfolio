@@ -11,46 +11,15 @@ class Controls extends Component {
       timeSpent
     } = this.props;
 
-    const mineDigits = minesLeft.toString().split('');
-    const timeDigits = timeSpent.toString().split('');
-
     return (
-      <div className={styles.controlsPadding}>
-        <div className={styles.controlsContainer}>
-          <div className={styles.relativeContainer}>
-            <div className={styles.mineContainer}>
-              {mineDigits.length === 1 &&
-                <Fragment>
-                  <div className={styles.number0} />
-                  <div className={styles.number0} />
-                </Fragment>
-              }
-
-              {mineDigits.length === 2 &&
-                <div className={styles.number0} />
-              }
-              {mineDigits.map((digit, index) => (
-                <div key={index} className={styles[`number${digit}`]} />
-              ))}
-            </div>
-            <div className={styles.resetButton}
-              onClick={onReset} />
-            <div className={styles.timeContainer}>
-              {timeDigits.length === 1 &&
-                <Fragment>
-                  <div className={styles.number0} />
-                  <div className={styles.number0} />
-                </Fragment>
-              }
-
-              {timeDigits.length === 2 &&
-                <div className={styles.number0} />
-              }
-              {timeDigits.map((digit, index) => (
-                <div key={index} className={styles[`number${digit}`]} />
-              ))}
-            </div>
-          </div>
+      <div className={styles.relativeContainer}>
+        <div className={styles.mineContainer}>
+          {minesLeft}
+        </div>
+        <div className={styles.resetButton}
+          onClick={onReset}> :)</div>
+        <div className={styles.timeContainer}>
+          {timeSpent}
         </div>
       </div>
     );
