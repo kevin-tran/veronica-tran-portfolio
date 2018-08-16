@@ -25,42 +25,48 @@ class Nav extends React.Component {
 
         return (
             <Fragment>
-            <nav className={styles.nav}>
-                <div className={styles.topLeft}>
-                    <Button link='/'>Veronica Tran</Button>
+                <nav className={styles.nav}>
+                    <div className={styles.topLeft}>
+                        <Button link='/'>Veronica Tran</Button>
+                    </div>
+
+                    <div className={styles.socialLinks}>
+                        <p>Graphic + Digital Designer</p>
+                        <Fragment>
+                            <div>
+                                <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>
+                            </div>
+                            <div>
+                                <Button link='https://www.linkedin.com/in/veronica-tran' target='_blank' rel='noopener'>LinkedIn</Button>
+                            </div>
+                            <div>
+                                <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
+                            </div>
+                        </Fragment>
+                    </div>
+                </nav>
+                <div className={styles.bottomRight}>
+                    <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
                 </div>
 
-                <div className={styles.socialLinks}>
-                    <p>Graphic + Digital Designer</p>
-                    <Fragment>
-                        <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>
-                        <Button link='https://www.linkedin.com/in/veronica-tran' target='_blank' rel='noopener'>LinkedIn</Button>
-                        <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
-                    </Fragment>
+                <div className={styles.topRight}>
+                    <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
                 </div>
-            </nav>
-            <div className={styles.bottomRight}>
-                <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
-            </div>
 
-            <div className={styles.topRight}>
-                <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
-            </div>
+                <div className={styles.navLinks}>
+                    <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
+                    <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
+                </div>
 
-            <div className={styles.navLinks}>
-                <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
-                <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
-            </div>
+                <div className={styles.mobileNav} onClick={this.handleClick}>
+                    <Button>Menu</Button>
+                </div>
 
-            <div className={styles.mobileNav} onClick={this.handleClick}>
-                <Button>Menu</Button>
-            </div>
-
-            <div className={open ? styles.mobileNavItemsOpen : styles.mobileNavItems}>
-                <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
-                <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
-                <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
-            </div>
+                <div className={open ? styles.mobileNavItemsOpen : styles.mobileNavItems}>
+                    <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
+                    <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
+                    <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
+                </div>
             </Fragment>
         );
     }

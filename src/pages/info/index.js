@@ -3,7 +3,6 @@ import React, { Fragment } from 'react'
 import styles from './info.module.scss'
 
 const InfoPage = () => (
-  <Fragment>
     <section>
       <div className={styles.infoContainer}>
         <p>I craft compelling design solutions, rooted in conceptual ideas combined with distilled aesthetics. I work across digital, publications, exhibitions, identities, typefaces and more.</p>
@@ -53,7 +52,6 @@ const InfoPage = () => (
         </tbody>
       </table>
     </section>
-  </Fragment>
 )
 
 export default InfoPage

@@ -9,7 +9,7 @@ import './index.scss'
 import '../../fonts/space-grotesk-regular.woff2'
 
 const Layout = ({ children, ...rest }) => (
-  <div {...rest} style={{ width: '100%' }}>
+  <div {...rest} style={{ width: '100%', height: '100%' }}>
     <Nav />
     <Header />
     <main>

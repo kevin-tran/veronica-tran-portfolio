@@ -5,13 +5,13 @@
     opacity: 1;
     width: 22em;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
     transition: opacity 500ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
 }
 
 .topLeft, .bottomRight, .topRight, .navLinks, .socialLinks {
     will-change: opacity;
-    z-index: 100;
+    z-index: 1;
     animation: slideIn 1.5s;
 }
 

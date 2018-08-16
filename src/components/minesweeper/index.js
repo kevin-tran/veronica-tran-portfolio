@@ -1,6 +1,6 @@
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { Rnd } from 'react-rnd';
 
@@ -75,53 +75,54 @@ class Minesweeper extends Component {
       mineCount,
       minesLeft,
       timeSpent,
-      difficulty,
       windowOpen
     } = this.props;
     const { isOpening } = this.state;
 
     return (
-      <Rnd
-      default={{
-        x: 500,
-        y: 400,
-        width: 600,
-        height: 500,
-      }}
-      minWidth={200}
-      minHeight={260}
-      bounds="window"
-    >
-        {windowOpen ?
-          <div className={styles.container}>
-            <div className={styles.containerInner}>
-              <div className={styles.containerWindow}>
-                <Settings
-                  isOpening={isOpening}
-                  onReset={this.handleReset}
-                />
-                <div className={styles.containerBoard}>
-                  <Controls
-                    hasWon={hasWon}
-                    isTicking={isTicking}
-                    mineCount={mineCount}
-                    minesLeft={minesLeft}
-                    timeSpent={timeSpent}
+      <Fragment>
+        {windowOpen &&
+          <Rnd
+            default={{
+              x: 500,
+              y: 400,
+              width: 600,
+              height: 500,
+            }}
+            minWidth={200}
+            minHeight={260}
+            bounds="window"
+          >
+            <div className={styles.container}>
+              <div className={styles.containerInner}>
+                <div className={styles.containerWindow}>
+                  <Settings
+                    isOpening={isOpening}
                     onReset={this.handleReset}
                   />
-                  <BoardContainer
-                    mineCount={mineCount}
-                    isTicking={isTicking}
-                    isGameOver={isGameOver}
-                    onMouseUp={this.handleCellBlur}
-                    onMouseDown={this.handleCellFocus}
-                  />
+                  <div className={styles.containerBoard}>
+                    <Controls
+                      hasWon={hasWon}
+                      isTicking={isTicking}
+                      mineCount={mineCount}
+                      minesLeft={minesLeft}
+                      timeSpent={timeSpent}
+                      onReset={this.handleReset}
+                    />
+                    <BoardContainer
+                      mineCount={mineCount}
+                      isTicking={isTicking}
+                      isGameOver={isGameOver}
+                      onMouseUp={this.handleCellBlur}
+                      onMouseDown={this.handleCellFocus}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div> : <div></div>
+          </Rnd>
         }
-      </Rnd>
+      </Fragment>
     );
   }
 }
