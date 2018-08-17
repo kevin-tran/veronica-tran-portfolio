@@ -3,6 +3,8 @@ import Keyboard from '../components/keyboard'
 import WindowSVG from '../components/window'
 import Box from '../components/box'
 
+import styles from './index.module.scss'
+
 class IndexPage extends React.Component {
 
   render() {
@@ -11,7 +13,7 @@ class IndexPage extends React.Component {
         <Keyboard />
         <WindowSVG />
         <Box />
-      </div>
+        </div>
     );
   }
 }

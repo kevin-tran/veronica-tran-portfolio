@@ -1,0 +1,13 @@
+.box {
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.boxEdge {
+    width: 1em;
+    height: 1em;
+    background-color: #000;
+    position: absolute;
+}

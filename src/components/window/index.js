@@ -3,27 +3,24 @@ import { Rnd } from 'react-rnd';
 
 const WindowSVG = () => (
     <Rnd
-    default={{
-        x: -350,
-        y: 200,
-        width: 474,
-        height: 581,
-      }}
-      lockAspectRatio
-      bounds='window'>
-    <svg role='presentation' viewBox='0 0 474 581' preserveAspectRatio='none' height='100%' width='100%'>
-        <defs>
-            <path id='a' d='M0 0h474v40H0z' />
-            <path id='b' d='M0 39h474v542H0z' />
-        </defs>
-        <g fill='none' fillRule='evenodd'>
-            <use fill='#FFF' xlinkHref='#a' />
-            <path stroke='#000' d='M.5.5h473v39H.5z' />
-            <use fill='#FFF' xlinkHref='#b' />
-            <path stroke='#000' d='M.5 39.5h473v541H.5z' />
-            <path d='M1.5 40.5l472 540M473.5 40.5l-472 540' stroke='#000' strokeLinecap='square' />
-        </g>
-    </svg>
+        default={{
+            x: -350,
+            y: 200,
+            width: 480,
+            height: 580,
+        }}
+        minWidth={100}
+        minHeight={200}
+        lockAspectRatio
+        bounds='window'>
+        <svg style={{ width: '100%', height: '100%', border: '1px solid #000' }}>
+            <line x1='0' y1='2em' x2='100%' y2='2em'
+                style={{ stroke: '#000', strokeWidth: 1 }} />
+            <line x1='0' y1='100%' x2='100%' y2='2em'
+                style={{ stroke: '#000', strokeWidth: 1 }} />
+            <line x1='100%' y1='100%' x2='0' y2='2em'
+                style={{ stroke: '#000', strokeWidth: 1 }} />
+        </svg>
     </Rnd>
 )
 

@@ -3,3 +3,17 @@
     align-items: center;
     justify-content: center;
 }
+
+.box {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000;
+    position: relative;
+    margin: -1px;
+}
+
+.boxTitle {
+    padding: 1em;
+    border: 1px solid #000;
+    border-bottom: 0;
+}
