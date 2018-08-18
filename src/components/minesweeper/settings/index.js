@@ -35,32 +35,21 @@ class Settings extends Component {
   }
 
   render() {
-    const {
-      onReset,
-    } = this.props;
 
     return (
       <div className={styles.relative}>
-      <div className={styles.titleBar}>
-      Minesweeper
-      <div className={styles.buttons}>
-        <div className={styles.close} onClick={() => this.handleClose(false)}></div>
-      </div>
-      </div>
-          {/* <p
-            className={styles.settingsButton}
-            onClick={this.handleSettings}>
-            Game
-          </p>
-        {this.state.showSettings &&
-          <ul className={styles.settings}>
-          <li onClick={() => { onReset(); this.setState({ showSettings: false });}}>New</li>
-          <li className={styles.menuDivider} />
-              <li onClick={() => { this.handleChange('easy'); this.setState({ showSettings: false });}}>Beginner</li>
-              <li onClick={() => { this.handleChange('medium'); this.setState({ showSettings: false });}}>Intermediate</li>
-              <li onClick={() => { this.handleChange('hard'); this.setState({ showSettings: false });}}>Expert</li>
-          </ul>
-        } */}
+        <div className={styles.titleBar}>
+          Minesweeper
+          <div className={styles.buttons}>
+            <div onClick={() => this.handleClose(false)}>
+              <svg width='1.1em' height='1.1em' viewBox='0 0 20 19'>
+                <g stroke="#000" fill="none" fillRule="evenodd" strokeLinecap="square">
+                  <path d="M.83333333 18.1666667L18.5110029.48899714M19.16666667 18.1666667L1.4889971.48899714" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -79,8 +68,8 @@ function mapDispatchToProps(dispatch) {
 }
 
 Settings.defaultProps = {
-  onReset() {},
-  onClose() {},
+  onReset() { },
+  onClose() { },
   isOpening: false
 };
 

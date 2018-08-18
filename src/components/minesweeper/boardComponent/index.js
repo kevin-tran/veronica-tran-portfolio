@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Cell from '../cell';
+import Settings from '../settings';
+import Controls from '../controls'
 
 import styles from './index.module.scss';
 
@@ -27,37 +29,61 @@ class BoardComponent extends Component {
   }
 
   render() {
+    const {
+      hasWon,
+      isTicking,
+      mineCount,
+      minesLeft,
+      timeSpent,
+      isOpening 
+    } = this.props;
+
     return (
       <div onContextMenu={this.handleContextMenu} className={styles.boardContainer}>
+        <Settings
+          isOpening={isOpening}
+          onReset={this.handleReset}
+        />
+        <Controls
+          hasWon={hasWon}
+          isTicking={isTicking}
+          mineCount={mineCount}
+          minesLeft={minesLeft}
+          timeSpent={timeSpent}
+          onReset={this.handleReset}
+        />
+
+        <div className={styles.cellContainer}>
         {this.props.board &&
           this.props.board.map((row, idx) => (
-              <div key={idx} className={styles.cellContainer}>
-                {row.map((cell, idx) => {
-                  return (
-                    <Cell
-                      key={idx}
-                      hasMine={cell.get('hasMine')}
-                      hasFlag={cell.get('hasFlag')}
-                      isOpened={cell.get('isOpened')}
-                      neighborMineCount={cell.get('neighborMineCount')}
-                      onBlur={this.props.onMouseUp}
-                      onFocus={this.props.onMouseDown}
-                      isGameOver={this.props.isGameOver}
-                      onFlag={e => this.handleCellFlagged(e, cell)}
-                      onClick={e => this.handleCellClicked(e, cell)}
-                    />
-                  );
-                })}
-              </div>
+            <div key={idx} className={styles.cellRow}>
+              {row.map((cell, idx) => {
+                return (
+                  <Cell
+                    key={idx}
+                    hasMine={cell.get('hasMine')}
+                    hasFlag={cell.get('hasFlag')}
+                    isOpened={cell.get('isOpened')}
+                    neighborMineCount={cell.get('neighborMineCount')}
+                    onBlur={this.props.onMouseUp}
+                    onFocus={this.props.onMouseDown}
+                    isGameOver={this.props.isGameOver}
+                    onFlag={e => this.handleCellFlagged(e, cell)}
+                    onClick={e => this.handleCellClicked(e, cell)}
+                  />
+                );
+              })}
+            </div>
           ))}
+          </div>
       </div>
     );
   }
 }
 
 BoardComponent.defaultProps = {
-  onMouseDown() {},
-  onMouseUp() {},
+  onMouseDown() { },
+  onMouseUp() { },
   isGameOver: false,
   isTicking: false,
   mineCount: 10,

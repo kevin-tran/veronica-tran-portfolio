@@ -1,32 +1,21 @@
 .relativeContainer {
     position: relative;
-    overflow: hidden;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
 }
 
 .mineContainer {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 1px;
     z-index: 1;
 }
 
 .resetButton {
     cursor: pointer;
-    background-position: 0 -55px;
     height: 26px;
     width: 26px;
     margin: 0 auto;
 }
 
-.resetButtonClicked {
-    background-position: -26px -55px;
-}
-
 .timeContainer {
-    overflow: hidden;
-    position: absolute;
-    top: 1px;
     z-index: 1;
-    right: 0;
 }

@@ -1,7 +1,11 @@
 .boardContainer {
-    padding-top: 1em;
+    height: 100%;
+}
+
+.cellRow {
+    display: flex;
 }
 
 .cellContainer {
-    display: flex;
+    padding: 0 1.5em 1.5em;
 }

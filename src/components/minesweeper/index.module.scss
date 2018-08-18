@@ -6,15 +6,17 @@
     height: 100%;
     width: 100%;
     background-color: white;
+    z-index: 1;
 }
 
 .containerWindow {
     position: relative;
+    height: 100%;
 }
 
 .containerBoard {
     position: relative;
-    padding: 1em;
+    height: 100%;
 }
 
 .scale-enter {

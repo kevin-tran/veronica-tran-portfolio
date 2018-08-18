@@ -6,9 +6,7 @@ import { Rnd } from 'react-rnd';
 
 import * as appActionCreators from '../../state/actions/app';
 
-import Settings from './settings';
 import BoardContainer from './board';
-import Controls from './controls';
 
 import styles from './index.module.scss';
 
@@ -71,13 +69,9 @@ class Minesweeper extends Component {
     const {
       isGameOver,
       isTicking,
-      hasWon,
       mineCount,
-      minesLeft,
-      timeSpent,
       windowOpen
     } = this.props;
-    const { isOpening } = this.state;
 
     return (
       <Fragment>
@@ -86,29 +80,15 @@ class Minesweeper extends Component {
             default={{
               x: 500,
               y: 400,
-              width: 600,
-              height: 500,
             }}
-            minWidth={200}
-            minHeight={260}
+            minWidth={800}
+            minHeight={580}
             bounds="window"
           >
             <div className={styles.container}>
               <div className={styles.containerInner}>
                 <div className={styles.containerWindow}>
-                  <Settings
-                    isOpening={isOpening}
-                    onReset={this.handleReset}
-                  />
                   <div className={styles.containerBoard}>
-                    <Controls
-                      hasWon={hasWon}
-                      isTicking={isTicking}
-                      mineCount={mineCount}
-                      minesLeft={minesLeft}
-                      timeSpent={timeSpent}
-                      onReset={this.handleReset}
-                    />
                     <BoardContainer
                       mineCount={mineCount}
                       isTicking={isTicking}

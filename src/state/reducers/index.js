@@ -9,7 +9,7 @@ function cellPosition(cell) {
 
 const initalState = Map({
   board: List(),
-  difficulty: 'easy',
+  difficulty: 'hard',
   isTicking: false,
   hasWon: false,
   rows: 9,
@@ -19,11 +19,10 @@ const initalState = Map({
   mineCount: 10,
   minesLeft: 10,
   gameCount: 0,
-  windowOpen: true
+  windowOpen: false
 });
 
 export default (state = initalState, action) => {
-  console.log(action);
   switch (action.type) {
     case types.CONFIGURE_ROUND:
       return state

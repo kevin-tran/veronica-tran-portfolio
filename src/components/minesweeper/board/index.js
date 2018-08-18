@@ -13,7 +13,15 @@ class BoardContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    board: state.get('board')
+    board: state.get('board'),
+    hasWon: state.get('hasWon'),
+    timeSpent: state.get('timeSpent'),
+    mineCount: state.get('mineCount'),
+    isTicking: state.get('isTicking'),
+    minesLeft: state.get('minesLeft'),
+    isGameOver: state.get('isGameOver'),
+    difficulty: state.get('difficulty'),
+    windowOpen: state.get('windowOpen')
   };
 }
 
