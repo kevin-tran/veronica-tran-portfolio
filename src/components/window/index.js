@@ -9,7 +9,7 @@ const WindowSVG = () => (
         {({ activeWindow, setActiveWindow }) => (
             <Rnd
                 default={{
-                    x: -350,
+                    x: 600,
                     y: 200,
                     width: 480,
                     height: 580,

@@ -78,11 +78,11 @@ class Minesweeper extends Component {
         {windowOpen &&
           <Rnd
             default={{
-              x: 500,
-              y: 400,
+              x: 400,
+              y: 300,
             }}
             minWidth={800}
-            minHeight={580}
+            minHeight={550}
             bounds="window"
           >
             <div className={styles.container}>

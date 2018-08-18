@@ -4,6 +4,10 @@
 
 .cellRow {
     display: flex;
+
+    &:first-child {
+        border-top: 1px solid black;
+    }
 }
 
 .cellContainer {

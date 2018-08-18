@@ -27,7 +27,6 @@ class Cell extends Component {
     const className = classNames({
       [styles.cell]: true,
       [styles.cellOpened]: isOpened,
-      [styles.cellClosed]: !isOpened,
       [styles.flag]: hasFlag && !isOpened && !isGameOver
     });
 
