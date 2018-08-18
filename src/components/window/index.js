@@ -19,7 +19,7 @@ const WindowSVG = () => (
                 lockAspectRatio
                 bounds='window'
                 onDragStart={() => setActiveWindow('Window')}
-                className={activeWindow === 'Window' ? styles.containerActive : ''}
+                className={styles.rndOverlay}
                 >
                 <svg className={styles.container}>
                     <line x1='0' y1='2em' x2='100%' y2='2em'

@@ -3,7 +3,7 @@
     position: fixed;
     pointer-events: auto;
     opacity: 1;
-    width: 22em;
+    width: 20em;
     height: 100%;
     z-index: 1;
     transition: opacity 500ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
@@ -78,7 +78,7 @@
 
     .navLinks {
         display: block;
-        left: 22em;
+        left: 20em;
     }
 
     .topRight {

@@ -39,7 +39,7 @@ class Cell extends Component {
         onMouseUp={this.props.onBlur}
         onContextMenu={this.props.onFlag}>
         {isOpened && !hasMine && neighborMineCount > 0 &&
-          <span>{neighborMineCount}</span>
+          <span className={styles.fadeIn}>{neighborMineCount}</span>
         }
         {isGameOver && hasMine && !isOpened &&
           <svg width="1em" height="1em" viewBox='0 0 22 21'>

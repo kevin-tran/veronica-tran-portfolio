@@ -1,7 +1,17 @@
-.headerContainer {
+.container {
     display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 4em 1em;
 
     >* {
+        margin-bottom: 3em;
+    }
+}
+
+.headerContainer {
+    display: flex;
+        >* {
         flex-basis: 30%;
     }
 }
@@ -9,4 +19,18 @@
 .contentContainer {
     max-width: 20em;
     margin-right: 1.2em;
+}
+
+.projectImage {
+    max-width: 100%;
+    min-height: 50em;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width: '1400px') {
+
+    .container {
+        padding: 4em 20em;
+    }
 }

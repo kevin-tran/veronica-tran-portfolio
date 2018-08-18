@@ -1,16 +1,45 @@
 import React, { Component } from 'react';
 import { Provider } from './createContext';
 
-// The provider, which holds the page-wide store and its actions.
-// Feel free to abstract actions and state away from this file.
 class AppProvider extends Component {
   state = {
-    activeWindow: '',
+    windowOrder: [],
     setActiveWindow: this.setActiveWindow.bind(this),
   };
 
   setActiveWindow(windowKey) {
-    this.setState({ activeWindow: windowKey });
+    // if (this.state.windowOrder[windowKey]) {
+    //   if (this.state.windowOrder.length === 1) return;
+
+    //   const restOfKeys = this.state.windowOrder.filter(key => key !== windowKey);
+    //   restOfKeys.unshift(windowKey);
+
+    //   this.setState({ windowOrder: restOfKeys });
+    // }
+
+    // else {
+    //   this.setState({ windowOrder: [ ...this.state.windowOrder, windowKey]});
+    // }
+
+    if (this.state.windowOrder.length === 0) {
+      this.setState({ windowOrder:[...this.state.windowOrder, windowKey]});
+      console.log(this.state.windowOrder);
+      return;
+    }
+
+    console.log(this.state.windowOrder.indexOf(windowKey) >= 0);
+    if(this.state.windowOrder.indexOf(windowKey) >= 0) {
+      this.setState({ windowOrder: [windowKey, ...this.state.windowOrder]});
+      console.log(this.state.windowOrder);
+      return;
+    } else {
+          const restOfKeys = this.state.windowOrder.filter(key => console.log(key));
+          console.log(restOfKeys);
+
+          this.setState({ windowOrder: [windowKey, ...restOfKeys] });
+          console.log(this.state.windowOrder);
+    }
+
   }
 
   render() {

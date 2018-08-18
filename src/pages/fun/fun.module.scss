@@ -1,3 +1,9 @@
+.container {
+    height: 100%;
+    width: 100%;
+    padding-left: 20em;
+}
+
 .placeholderImg {
     height: 400px;
     width: 300px;
@@ -6,7 +12,7 @@
 
 .funCard {
     width: 20em;
-    height: 30em; 
+    height: 30em;
     background-color: #eee; 
     margin: 1em;
 
@@ -17,11 +23,6 @@
     &:last-child {
         margin-right: 0;
     }
-}
-
-.container {
-    height: 100%;
-    width: 100%;
 }
 
 .alignCenter {

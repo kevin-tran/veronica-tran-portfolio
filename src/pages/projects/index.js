@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby';
 
 import styles from './index.module.scss'
 
@@ -16,8 +17,7 @@ import cadThumbnail from './images/thumbnails/cad-feature-thumbnail.png'
 
 const ProjectsPage = () => (
     <div className={styles.projectContainer}>
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${chThumbnail})`}}>
-      </div>
+    <Link to='/projects/contemporary-hotels' className={styles.projectCard} style={{ backgroundImage: `url(${chThumbnail})`}} />
       <div className={styles.projectCard} style={{ backgroundImage: `url(${odysseyThumbnail})`}}>
       </div>
       <div className={styles.projectCard} style={{ backgroundImage: `url(${isoThumbnail})`}}>

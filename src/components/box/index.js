@@ -19,6 +19,7 @@ const Box = () => (
             lockAspectRatio
             bounds='window'
             onDragStart={() => setActiveWindow('Box')}
+            className={styles.rndOverlay}
             >
             <div className={activeWindow === 'Box' ? styles.boxActive : styles.box}>
             <div className={styles.boxEdge} style={{ left: '-.5em', top: '-.5em' }} />

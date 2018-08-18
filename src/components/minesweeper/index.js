@@ -83,7 +83,8 @@ class Minesweeper extends Component {
             }}
             minWidth={800}
             minHeight={550}
-            bounds="window"
+            bounds='window'
+            className={styles.rndOverlay}
           >
             <div className={styles.container}>
               <div className={styles.containerInner}>

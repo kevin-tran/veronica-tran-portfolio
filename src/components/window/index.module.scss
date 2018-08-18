@@ -5,6 +5,10 @@
     background: white;
 }
 
+.rndOverlay {
+    z-index: 2;
+}
+
 .containerActive {
     z-index: 1000;
 }

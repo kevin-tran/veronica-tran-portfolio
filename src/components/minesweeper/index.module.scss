@@ -6,7 +6,10 @@
     height: 100%;
     width: 100%;
     background-color: white;
-    z-index: 1;
+}
+
+.rndOverlay {
+    z-index: 2;
 }
 
 .containerWindow {
