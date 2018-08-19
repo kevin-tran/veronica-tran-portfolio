@@ -16,36 +16,38 @@ import wikifragsThumbnail from './images/thumbnails/wikifrags-feature-thumbnail.
 import cadThumbnail from './images/thumbnails/cad-feature-thumbnail.png'
 
 const ProjectsPage = () => (
-    <div className={styles.projectContainer}>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard} style={{ backgroundImage: `url(${chThumbnail})`}} />
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${odysseyThumbnail})`}}>
+  <div className={styles.projectContainer}>
+    <div className={styles.projectRow}>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard} style={{ backgroundImage: `url(${chThumbnail})` }} />
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${odysseyThumbnail})` }}>
       </div>
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${isoThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${isoThumbnail})` }}>
       </div>
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${caThumbnail})`}}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${fcThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${caThumbnail})` }}>
       </div>
 
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${meshThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${fcThumbnail})` }}>
       </div>
 
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${unboundThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${meshThumbnail})` }}>
       </div>
 
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${driftThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${unboundThumbnail})` }}>
       </div>
 
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${skaThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${driftThumbnail})` }}>
       </div>
 
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${wikifragsThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${skaThumbnail})` }}>
       </div>
 
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${cadThumbnail})`}}>
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${wikifragsThumbnail})` }}>
       </div>
+
+      <div className={styles.projectCard} style={{ backgroundImage: `url(${cadThumbnail})` }}>
       </div>
+    </div>
+  </div>
 )
 
 export default ProjectsPage

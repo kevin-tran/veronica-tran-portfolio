@@ -1,15 +1,17 @@
 .projectContainer {
+    width: 100%;
+}
+
+.projectRow {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 -3em;
-    width: 100%;
-    padding: 4em 20em;
+    margin: 0 -1.5em;
 }
 
 .projectCard {
     flex-basis: 100%;
     margin: 1.5em;
-    height: 25em;
+    height: 20em;
     background-color: #eee;
     background-size: cover;
     background-position: center;
@@ -22,11 +24,21 @@
 @media only screen and (min-width: '1440px') {
     .projectCard {
         flex-basis: calc(50% - 3em);
-        height: 30em;
 
         &:first-child {
             margin-top: 1.5em;
         }
+    }
+
+    .projectContainer {
+        padding: 4em 15em;
+    }    
+}
+
+@media only screen and (min-width: '1800px') {
+
+    .projectContainer {
+        padding: 4em 20em;
     }
 }
 
