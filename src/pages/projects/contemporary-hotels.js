@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image';
@@ -41,36 +41,36 @@ export const query = graphql`
 query {
   galleryImage1: file(relativePath: { eq: "ch/ch-1.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 3000,) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
   }
   galleryImage2: file(relativePath: { eq: "ch/ch-2.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
   }
   galleryImage4: file(relativePath: { eq: "ch/ch-4.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
   }
   galleryImage5: file(relativePath: { eq: "ch/ch-5.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
   }
   galleryImage6: file(relativePath: { eq: "ch/ch-6.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
   }
