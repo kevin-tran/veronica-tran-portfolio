@@ -44,6 +44,9 @@ class Nav extends React.Component {
                             </div>
                         </Fragment>
                     </div>
+                    <div className={styles.bottomLeft}>
+                        <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
+                    </div>
                 </nav>
                 <div className={styles.bottomRight}>
                     <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>

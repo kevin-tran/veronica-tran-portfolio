@@ -9,10 +9,10 @@ const Box = () => (
         {({ activeWindow, setActiveWindow }) => (
             <Rnd
             default={{
-                x: 900,
-                y: 600,
-                width: 493,
-                height: 505,
+                x: 600,
+                y: 400,
+                width: 400,
+                height: 300,
             }}
             minWidth={150}
             minHeight={150}

@@ -9,7 +9,7 @@ function cellPosition(cell) {
 
 const initalState = Map({
   board: List(),
-  difficulty: 'hard',
+  difficulty: 'medium',
   isTicking: false,
   hasWon: false,
   rows: 9,

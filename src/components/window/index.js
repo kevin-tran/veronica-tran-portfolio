@@ -9,10 +9,10 @@ const WindowSVG = () => (
         {({ activeWindow, setActiveWindow }) => (
             <Rnd
                 default={{
-                    x: 600,
-                    y: 200,
-                    width: 480,
-                    height: 580,
+                    x: 550,
+                    y: 150,
+                    width: 300,
+                    height: 400,
                 }}
                 minWidth={100}
                 minHeight={200}

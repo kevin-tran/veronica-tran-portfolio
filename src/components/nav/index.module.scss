@@ -41,8 +41,15 @@
     left: 1.2em;
 }
 
+.bottomLeft {
+    position: absolute;
+    bottom: 1.2em;
+    left: 1.2em;
+}
+
 .bottomRight {
     position: absolute;
+    display: none;
     bottom: 1.2em;
     right: 1.2em;
 }
@@ -122,6 +129,16 @@
 
     .bottomRight {
         right: 1.2em;
+    }
+}
+
+@media only screen and (min-width: '1800px') {
+    .bottomRight {
+        display: block;
+    }
+
+    .bottomLeft {
+        display: none;
     }
 }
 
