@@ -1,6 +1,6 @@
 .projectContainer {
     width: 100%;
-    padding: 4em 1.2em 4em 15em;
+    padding: 4em 1.2em 4em 1.2em;
 }
 
 .projectRow {
@@ -12,12 +12,18 @@
 .projectCard {
     flex-basis: 100%;
     margin: 1em;
-    background-color: #eee;
+    background-color: #fafafa;
     background-size: cover;
     background-position: center;
 
     &:first-child {
         margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: '768px') {
+    projectContainer {
+        padding-left: 15em;
     }
 }
 

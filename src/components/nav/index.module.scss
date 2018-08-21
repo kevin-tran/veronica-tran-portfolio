@@ -1,5 +1,5 @@
 .nav {
-    display: inline-block;
+    display: none;
     position: fixed;
     pointer-events: auto;
     opacity: 1;
@@ -86,15 +86,31 @@
 }
 
 .mobileNav {
-    display: block;
+    display: flex;
+    left: 1.2em;
+
+    >:nth-child(2) {
+        margin-left: auto;
+    }
 }
 
 .mobileNavItems {
+    transform: translateY(-100%);
+    transition: .3s ease-in-out;
+    padding: 4em 1.2em;
     display: none;
 }
 
 .mobileNavItemsOpen {
     display: block;
+    position: absolute;
+    transform: translateY(0%);
+    transition: .3s ease-in-out;
+    padding: 4em 2em;
+    background-color: black;
+    a {
+        color: white;
+    }
 }
 
 .activeLink {
@@ -103,13 +119,12 @@
 
 @media only screen and (min-width: '768px') {
 
-    .navLinks {
+    .topRight, .nav, .navLinks {
         display: block;
-        left: 20em;
     }
 
-    .topRight {
-        display: block;
+    .navLinks {
+        left: 20em;
     }
 
     .socialLinks {

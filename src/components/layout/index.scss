@@ -16,8 +16,8 @@ body {
 
 main {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     height: 100%;
     max-width: 100%;
     z-index: 2;
@@ -38,4 +38,10 @@ a {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+@media only screen and (min-width: '768px') {
+    main {
+        align-items: center;
+    }
 }

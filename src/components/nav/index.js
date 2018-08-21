@@ -61,8 +61,9 @@ class Nav extends React.Component {
                     <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
                 </div>
 
-                <div className={styles.mobileNav} onClick={this.handleClick}>
-                    <Button>Menu</Button>
+                <div className={styles.mobileNav}>
+                    <Button link='/'>Veronica Tran</Button>
+                    <Button onClick={this.handleClick}>Menu</Button>
                 </div>
 
                 <div className={open ? styles.mobileNavItemsOpen : styles.mobileNavItems}>
