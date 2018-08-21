@@ -27,11 +27,11 @@ const ContemporaryHotelsPage = ({ data }) => (
         </section>
       </div>
 
-      <Img fluid={data.galleryImage1.childImageSharp.fluid} />
-      <Img fluid={data.galleryImage2.childImageSharp.fluid} />
-      <Img fluid={data.galleryImage4.childImageSharp.fluid} />
-      <Img fluid={data.galleryImage5.childImageSharp.fluid} />
-      <Img fluid={data.galleryImage6.childImageSharp.fluid} />
+      <Img fluid={data.galleryImage1.childImageSharp.fluid} className={styles.placeholder} />
+      <Img fluid={data.galleryImage2.childImageSharp.fluid} className={styles.placeholder} />
+      <Img fluid={data.galleryImage4.childImageSharp.fluid} className={styles.placeholder} />
+      <Img fluid={data.galleryImage5.childImageSharp.fluid} className={styles.placeholder} />
+      <Img fluid={data.galleryImage6.childImageSharp.fluid} className={styles.placeholder} />
     </div>
 );
 
