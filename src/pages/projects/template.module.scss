@@ -10,7 +10,8 @@
 }
 
 .headerContainer {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .contentContainer {
@@ -37,7 +38,19 @@
     }
 
     .headerContainer {
-            >* {
+        flex-direction: row;
+
+        >* {
+            flex-basis: 50%;
+        }
+    }
+}
+
+@media only screen and (min-width: '1200px') {
+    .headerContainer {
+        flex-direction: row;
+
+        >* {
             flex-basis: 30%;
         }
     }

@@ -48,17 +48,17 @@ class Nav extends React.Component {
                         <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
                     </div>
                 </nav>
-                <div className={styles.bottomRight}>
-                    <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
-                </div>
 
-                <div className={styles.topRight}>
-                    <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
-                </div>
-
-                <div className={styles.navLinks}>
+                <nav className={styles.verticalNav}>
+                <Fragment>
                     <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
                     <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
+                </Fragment>
+
+                 <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
+                </nav>
+                <div className={styles.bottomRight}>
+                    <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
                 </div>
 
                 <div className={styles.mobileNav}>
