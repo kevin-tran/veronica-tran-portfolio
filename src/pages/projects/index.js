@@ -41,34 +41,6 @@ const ProjectsPage = ({ data }) => (
     <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
       <Img fluid={data.thumbnail11.childImageSharp.fluid}  />
     </Link>
-      {/* <Link to='/projects/contemporary-hotels' className={styles.projectCard} style={{ backgroundImage: `url(${chThumbnail})` }} />
-      <div className={styles.projectCard}>
-      </div>
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${isoThumbnail})` }}>
-      </div>
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${caThumbnail})` }}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${fcThumbnail})` }}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${meshThumbnail})` }}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${unboundThumbnail})` }}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${driftThumbnail})` }}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${skaThumbnail})` }}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${wikifragsThumbnail})` }}>
-      </div>
-
-      <div className={styles.projectCard} style={{ backgroundImage: `url(${cadThumbnail})` }}>
-      </div> */}
     </div>
   </div>
 )
@@ -79,78 +51,78 @@ export const query = graphql`
 query {
   thumbnail1: file(relativePath: { eq: "thumbnails/ch-feature-thumbnail.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail2: file(relativePath: { eq: "thumbnails/odyssey-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail3: file(relativePath: { eq: "thumbnails/fc-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail4: file(relativePath: { eq: "thumbnails/ca-feature-thumbnail.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail5: file(relativePath: { eq: "thumbnails/iso-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail6: file(relativePath: { eq: "thumbnails/cad-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail7: file(relativePath: { eq: "thumbnails/mesh-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail8: file(relativePath: { eq: "thumbnails/unbound-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail9: file(relativePath: { eq: "thumbnails/drift-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail10: file(relativePath: { eq: "thumbnails/ska-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail11: file(relativePath: { eq: "thumbnails/wikifrags-feature-thumbnail.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }

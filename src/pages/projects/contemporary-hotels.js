@@ -41,36 +41,36 @@ export const query = graphql`
 query {
   galleryImage1: file(relativePath: { eq: "ch/ch-1.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000,) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      fluid(maxWidth: 3000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage2: file(relativePath: { eq: "ch/ch-2.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      fluid(maxWidth: 3000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage4: file(relativePath: { eq: "ch/ch-4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      fluid(maxWidth: 3000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage5: file(relativePath: { eq: "ch/ch-5.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      fluid(maxWidth: 3000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage6: file(relativePath: { eq: "ch/ch-6.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      fluid(maxWidth: 3000, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
