@@ -22,15 +22,15 @@ const Box = () => (
             className={styles.rndOverlay}
             >
             <div className={activeWindow === 'Box' ? styles.boxActive : styles.box}>
-            <div className={styles.boxEdge} style={{ left: '-.5em', top: '-.5em' }} />
-            <div className={styles.boxEdge} style={{ right: '-.5em', top: '-.5em' }} />
-            <div className={styles.boxEdge} style={{ bottom: '-.5em', left: '-.5em' }} />
-            <div className={styles.boxEdge} style={{ bottom: '-.5em', right: '-.5em' }} />
+            <div className={styles.boxEdge} style={{ left: '-.4em', top: '-.4em' }} />
+            <div className={styles.boxEdge} style={{ right: '-.4em', top: '-.4em' }} />
+            <div className={styles.boxEdge} style={{ bottom: '-.4em', left: '-.4em' }} />
+            <div className={styles.boxEdge} style={{ bottom: '-.4em', right: '-.4em' }} />
 
-            <div className={styles.boxEdge} style={{ top: '-.5em', right: 0, left: 0, marginRight: 'auto', marginLeft: 'auto' }} />
-            <div className={styles.boxEdge} style={{ bottom: '-.5em', right: 0, left: 0, marginRight: 'auto', marginLeft: 'auto' }} />
-            <div className={styles.boxEdge} style={{ left: '-.5em', top: '46%' }} />
-            <div className={styles.boxEdge} style={{ right: '-.5em', top: '46%' }} />
+            <div className={styles.boxEdge} style={{ top: '-.4em', right: 0, left: 0, marginRight: 'auto', marginLeft: 'auto' }} />
+            <div className={styles.boxEdge} style={{ bottom: '-.4em', right: 0, left: 0, marginRight: 'auto', marginLeft: 'auto' }} />
+            <div className={styles.boxEdge} style={{ left: '-.4em', top: '46%' }} />
+            <div className={styles.boxEdge} style={{ right: '-.4em', top: '46%' }} />
             </div>
             </Rnd>
         )}

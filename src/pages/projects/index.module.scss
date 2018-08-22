@@ -11,7 +11,7 @@
 
 .projectCard {
     flex-basis: 100%;
-    margin: 1em;
+    margin: 0 1em 1em;
     background-color: #fafafa;
     background-size: cover;
     background-position: center;
@@ -30,6 +30,7 @@
 @media only screen and (min-width: '1200px') {
     .projectCard {
         flex-basis: calc(50% - 2em);
+        margin: 1em;
 
         &:first-child {
             margin-top: 1em;

@@ -62,7 +62,7 @@
 
 .verticalNav {
     position: fixed;
-    left: 20em;
+    left: 15em;
     right: 0;
     top: 0;
     padding: 1.2em 1.2em 1.2em 0;
@@ -177,6 +177,10 @@
 
     .bottomLeft {
         display: none;
+    }
+
+    .verticalNav {
+        left: 20em;
     }
 }
 

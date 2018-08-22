@@ -6,34 +6,46 @@ import Img from 'gatsby-image';
 import styles from './template.module.scss'
 
 
-const ContemporaryHotelsPage = ({ data }) => (
-    <div className={styles.container}>
-      <div>
-        <section className={styles.headerContainer}>
-          <div>
-            <p><b>Contemporary Hotels</b></p>
-            <p>Project Subheading</p>
-          </div>
+class ContemporaryHotelsPage extends React.Component {
 
-          <div className={styles.contentContainer}>
-            <p>UX, UI, ILLUSTRATION, MOTION</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
 
-          <div className={styles.contentContainer}>
-            <p>AGENCY: LIQUID</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-        </section>
+  render() {
+
+    const { data } = this.props;
+
+    return (
+      <div className={styles.container}>
+        <div>
+          <section className={styles.headerContainer}>
+            <div>
+              <p><b>Contemporary Hotels</b></p>
+              <p>Project Subheading</p>
+            </div>
+  
+            <div className={styles.contentContainer}>
+              <p>UX, UI, ILLUSTRATION, MOTION</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+  
+            <div className={styles.contentContainer}>
+              <p>AGENCY: LIQUID</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </section>
+        </div>
+  
+        <Img fluid={data.galleryImage1.childImageSharp.fluid} className={styles.placeholder} />
+        <Img fluid={data.galleryImage2.childImageSharp.fluid} className={styles.placeholder} />
+        <Img fluid={data.galleryImage4.childImageSharp.fluid} className={styles.placeholder} />
+        <Img fluid={data.galleryImage5.childImageSharp.fluid} className={styles.placeholder} />
+        <Img fluid={data.galleryImage6.childImageSharp.fluid} className={styles.placeholder} />
       </div>
-
-      <Img fluid={data.galleryImage1.childImageSharp.fluid} className={styles.placeholder} />
-      <Img fluid={data.galleryImage2.childImageSharp.fluid} className={styles.placeholder} />
-      <Img fluid={data.galleryImage4.childImageSharp.fluid} className={styles.placeholder} />
-      <Img fluid={data.galleryImage5.childImageSharp.fluid} className={styles.placeholder} />
-      <Img fluid={data.galleryImage6.childImageSharp.fluid} className={styles.placeholder} />
-    </div>
-);
+  );
+  }
+}
 
 export default ContemporaryHotelsPage
 

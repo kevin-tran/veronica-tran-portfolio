@@ -31,7 +31,7 @@ class Nav extends React.Component {
                     </div>
 
                     <div className={styles.socialLinks}>
-                        <p>Graphic + Digital Designer</p>
+                        <p>Digital Designer</p>
                         <Fragment>
                             <div className={styles.socialPadding}>
                                 <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>

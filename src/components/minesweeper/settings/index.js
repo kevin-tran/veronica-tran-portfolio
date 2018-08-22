@@ -42,7 +42,7 @@ class Settings extends Component {
           Minesweeper
           <div className={styles.buttons}>
             <div onClick={() => this.handleClose(false)}>
-              <svg width='1.1em' height='1.1em' viewBox='0 0 20 19'>
+              <svg width='.7em' height='.7em' viewBox='0 0 20 19'>
                 <g stroke="#000" fill="none" fillRule="evenodd" strokeLinecap="square">
                   <path d="M.83333333 18.1666667L18.5110029.48899714M19.16666667 18.1666667L1.4889971.48899714" />
                 </g>
