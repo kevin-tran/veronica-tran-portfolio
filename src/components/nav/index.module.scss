@@ -53,6 +53,12 @@
     top: 1.2em;
 }
 
+.bottomRight {
+    position: fixed;
+    bottom: 1.2em;
+    left: 1.2em;
+}
+
 .verticalNav {
     position: fixed;
     left: 0;
@@ -86,7 +92,7 @@
 .mobileNav {
     background-color: white;
     z-index: 5;
-    position: fixed;
+    position: absolute;
     display: flex;
     left: 0;
     right: 0;
@@ -127,10 +133,26 @@
     font-weight: 600;
 }
 
+.hideMobile {
+    display: none;
+}
+
+.showMobile {
+    display: block;
+}
+
 @media only screen and (min-width: '768px') {
 
     .topRight, .nav, .navLinks {
         display: block;
+    }
+
+    .hideMobile {
+        display: block;
+    }
+
+    .showMobile {
+        display: none;
     }
 
     .navLinks {

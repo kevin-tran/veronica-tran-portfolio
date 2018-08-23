@@ -5,7 +5,7 @@
     padding: 4em 1.2em 4em 1.2em;
 
     >* {
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
 }
 
@@ -55,6 +55,10 @@
 @media only screen and (min-width: '768px') {
     .container {
         padding: 4em 10em;
+
+        >* {
+            margin-bottom: 3em;
+        }
     }
 
     .headerContainer {
