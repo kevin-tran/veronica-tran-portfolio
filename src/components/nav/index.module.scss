@@ -99,15 +99,13 @@
 }
 
 .mobileNavItems {
-    transform: translateY(-100%);
     transition: .3s ease-in-out;
     padding: 4em 1.2em;
     display: none;
 }
 
 .mobileNavItemsOpen {
-    position: absolute;
-    transform: translateY(0%);
+    position: fixed;
     transition: .3s ease-in-out;
     height: 100%;
     width: 100%;
