@@ -29,24 +29,6 @@ class Nav extends React.Component {
                     <div className={styles.topLeft}>
                         <Button link='/'>Veronica Tran</Button>
                     </div>
-
-                    <div className={styles.socialLinks}>
-                        <p>Digital Designer</p>
-                        <Fragment>
-                            <div className={styles.socialPadding}>
-                                <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>
-                            </div>
-                            <div className={styles.socialPadding}>
-                                <Button link='https://www.linkedin.com/in/veronica-tran' target='_blank' rel='noopener'>LinkedIn</Button>
-                            </div>
-                            <div className={styles.socialPadding}>
-                                <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
-                            </div>
-                        </Fragment>
-                    </div>
-                    <div className={styles.bottomLeft}>
-                        <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
-                    </div>
                 </nav>
 
                 <nav className={styles.verticalNav}>
@@ -57,7 +39,7 @@ class Nav extends React.Component {
 
                  <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
                 </nav>
-                <div className={styles.bottomRight}>
+                <div className={styles.bottomLeft}>
                     <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
                 </div>
 

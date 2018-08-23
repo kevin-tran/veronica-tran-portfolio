@@ -19,7 +19,7 @@ export default class HTML extends React.Component {
           <div
             key={`body`}
             id="___gatsby"
-            style={{ width: '100%', position: 'absolute', height: '100%', display: 'flex', overflow: 'auto'}}
+            style={{ width: '100%', position: 'absolute', height: '100%', display: 'flex'}}
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}

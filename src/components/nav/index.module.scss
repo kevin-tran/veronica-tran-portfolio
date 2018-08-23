@@ -41,19 +41,12 @@
 }
 
 .bottomLeft {
-    position: absolute;
-    bottom: 1.2em;
-    left: 1.2em;
-}
-
-.bottomRight {
-    position: absolute;
-    display: none;
+    position: fixed;
     bottom: 1.2em;
     right: 1.2em;
 }
 
-.topRight, .mobileNav {
+.topRight {
     position: absolute;
     display: none;
     right: 1.2em;
@@ -66,7 +59,7 @@
     right: 0;
     top: 0;
     padding: 1.2em 1.2em 1.2em 0;
-    z-index: 100;
+    z-index: 1;
     background-color: white;
     display: none;
 
@@ -105,8 +98,14 @@
 }
 
 .mobileNav {
+    background-color: white;
+    z-index: 5;
+    position: fixed;
     display: flex;
-    left: 1.2em;
+    left: 0;
+    right: 0;
+    padding: 1em 1.2em;
+    top: 0;
 
     >:nth-child(2) {
         margin-left: auto;
@@ -121,12 +120,14 @@
 }
 
 .mobileNavItemsOpen {
-    display: block;
     position: absolute;
     transform: translateY(0%);
     transition: .3s ease-in-out;
-    padding: 4em 2em;
+    height: 100%;
+    width: 100%;
+    display: flex;
     background-color: black;
+    justify-content: center;
     a {
         color: white;
     }
@@ -161,23 +162,14 @@
     .verticalNav {
         display: flex;
     }
-}
 
-@media only screen and (min-width: '1400px') {
-
-    .bottomRight {
-        right: 1.2em;
+    .bottomLeft {
+        left: 1.2em;
+        right: 0;
     }
 }
 
 @media only screen and (min-width: '1800px') {
-    .bottomRight {
-        display: block;
-    }
-
-    .bottomLeft {
-        display: none;
-    }
 
     .verticalNav {
         left: 20em;

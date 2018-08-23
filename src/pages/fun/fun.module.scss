@@ -1,7 +1,6 @@
 .container {
     height: 100%;
     width: 100%;
-    padding-left: 1.2em;
 }
 
 .placeholderImg {
@@ -28,11 +27,5 @@
 .alignCenter {
     >* {
         align-items: center;
-    }
-}
-
-@media only screen and (min-width: '768px') {
-    .container {
-        padding-left: 20em;
     }
 }

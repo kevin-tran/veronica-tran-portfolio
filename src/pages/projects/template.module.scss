@@ -34,7 +34,7 @@
 
 @media only screen and (min-width: '768px') {
     .container {
-        padding-left: 15em;
+        padding: 4em 10em;
     }
 
     .headerContainer {
@@ -53,6 +53,10 @@
         >* {
             flex-basis: 30%;
         }
+    }
+
+    .container {
+        padding: 4em 15em;
     }
 }
 
