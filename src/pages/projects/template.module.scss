@@ -12,6 +12,7 @@
 .headerContainer {
     display: flex;
     flex-direction: column;
+    animation: fadeInOpacity .5s;
 }
 
 .contentContainer {
@@ -65,4 +66,13 @@
     .container {
         padding: 10em 20em;
     }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

@@ -25,19 +25,18 @@ class Nav extends React.Component {
 
         return (
             <Fragment>
-                <nav className={styles.nav}>
+
+                <nav className={styles.verticalNav}>
+                    <Fragment>
+                        <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
+                        <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
+                    </Fragment>
+
                     <div className={styles.topLeft}>
                         <Button link='/'>Veronica Tran</Button>
                     </div>
-                </nav>
 
-                <nav className={styles.verticalNav}>
-                <Fragment>
-                    <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
-                    <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
-                </Fragment>
-
-                 <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
+                    <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
                 </nav>
                 <div className={styles.bottomLeft}>
                     <Button link='mailto:nveronicatran@gmail.com'>nveronicatran@gmail.com</Button>
@@ -49,9 +48,9 @@ class Nav extends React.Component {
                 </div>
 
                 <div className={open ? styles.mobileNavItemsOpen : styles.mobileNavItems}>
-                    <Link to='/info' activeClassName={styles.activeLink}>Info</Link>
-                    <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
-                    <Link to='/fun' activeClassName={styles.activeLink}>Fun</Link>
+                    <Link to='/projects' activeClassName={styles.activeLink} onClick={this.handleClick}>Projects</Link>
+                    <Link to='/fun' activeClassName={styles.activeLink} onClick={this.handleClick}>Fun</Link>
+                    <Link to='/info' activeClassName={styles.activeLink} onClick={this.handleClick}>Info</Link>
                 </div>
             </Fragment>
         );

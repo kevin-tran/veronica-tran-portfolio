@@ -1,6 +1,7 @@
 .container {
     height: 100%;
     width: 100%;
+    animation: fadeInOpacity .5s;
 }
 
 .placeholderImg {
@@ -28,4 +29,13 @@
     >* {
         align-items: center;
     }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

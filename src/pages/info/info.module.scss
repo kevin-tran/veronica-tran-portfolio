@@ -1,11 +1,14 @@
 .container {
-    align-self: center;
     padding: 1.2em;
+    display: block;
+    width: 100%;
+    padding: 4em 1.2em;
+    animation: fadeInOpacity .5s;
 }
 
 .infoContainer {
-    max-width: 23em;
-    line-height: 1.6;
+    line-height: 1.4;
+    margin-left: auto;
 }
 
 .table {
@@ -14,8 +17,57 @@
     td:not(:first-child) {
         padding-left: 2.2em;
     }
+
+    td {
+        line-height: 1;
+    }
+}
+
+.socialPadding {
+    padding-bottom: .3em;
+}
+
+.socialLinks {
+    >*:first-child {
+        padding-bottom: 1em;
+    }
 }
 
 .strikethrough {
     text-decoration: line-through;
+}
+
+@media only screen and (min-width: '768px') {
+    .container {
+        padding: 0 5em;
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width: '1200px') {
+    .container {
+        display: flex;
+        padding: 0 15em;
+    }
+}
+
+@media only screen and (min-width: '1400px') {
+    .container {
+        padding: 0 15em;
+    }
+}
+
+@media only screen and (min-width: '1800px') {
+    .container {
+        padding: 0 30em 0 20em;
+    }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

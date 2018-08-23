@@ -4,26 +4,24 @@ import Button from '../../components/button'
 import styles from './info.module.scss'
 
 const InfoPage = () => (
-    <section className={styles.container}>
-      <div className={styles.infoContainer}>
-
-      <div className={styles.socialLinks}>
-                        <p>Digital Designer</p>
-                        <Fragment>
-                            <div className={styles.socialPadding}>
-                                <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>
-                            </div>
-                            <div className={styles.socialPadding}>
-                                <Button link='https://www.linkedin.com/in/veronica-tran' target='_blank' rel='noopener'>LinkedIn</Button>
-                            </div>
-                            <div className={styles.socialPadding}>
-                                <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
-                            </div>
-                        </Fragment>
-                    </div>
-        <p>I craft compelling design solutions, rooted in conceptual ideas combined with distilled aesthetics. I work across digital, publications, exhibitions, identities, typefaces and more.</p>
-        <p>I'm interested in the intersections of art, design, media, popular culture and technology.</p>
-      </div>
+  <section className={styles.container}>
+    <div className={styles.socialLinks}>
+      <p>Digital Designer</p>
+      <Fragment>
+        <div className={styles.socialPadding}>
+          <Button link='https://www.instagram.com/nveronicatran' target='_blank' rel='noopener'>Instagram</Button>
+        </div>
+        <div className={styles.socialPadding}>
+          <Button link='https://www.linkedin.com/in/veronica-tran' target='_blank' rel='noopener'>LinkedIn</Button>
+        </div>
+        <div className={styles.socialPadding}>
+          <Button link='https://dribbble.com/veronicatran' target='_blank' rel='noopener'>Dribbble</Button>
+        </div>
+      </Fragment>
+    </div>
+    <div className={styles.infoContainer}>
+      <p>I craft compelling design solutions, rooted in<br />conceptual ideas combined with distilled<br />aesthetics. I work across digital, publications,<br />exhibitions, identities, typefaces and more.</p>
+      <p>I'm interested in the intersections of art, design,<br />media, popular culture and technology.</p>
 
       <table className={styles.table}>
         <tbody>
@@ -67,7 +65,8 @@ const InfoPage = () => (
           </tr>
         </tbody>
       </table>
-    </section>
+    </div>
+  </section>
 )
 
 export default InfoPage
