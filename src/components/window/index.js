@@ -6,7 +6,7 @@ import styles from './index.module.scss'
 
 const WindowSVG = () => (
     <Consumer>
-        {({ activeWindow, setActiveWindow }) => (
+        {({ windowOrder, setActiveWindow }) => (
             <Rnd
                 default={{
                     x: 550,
@@ -18,8 +18,9 @@ const WindowSVG = () => (
                 minHeight={200}
                 lockAspectRatio
                 bounds='window'
-                onDragStart={() => setActiveWindow('Window')}
+                onDragStart={() => setActiveWindow('window')}
                 className={styles.rndOverlay}
+                style={{ zIndex: `100${windowOrder.indexOf('window')}`}}
                 >
                 <svg className={styles.container}>
                     <line x1='0' y1='2em' x2='100%' y2='2em'

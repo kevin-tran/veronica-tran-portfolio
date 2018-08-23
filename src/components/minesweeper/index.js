@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Rnd } from 'react-rnd';
 
 import * as appActionCreators from '../../state/actions/app';
+import { Consumer } from '../../state/context/createContext'
 
 import BoardContainer from './board';
 
@@ -74,7 +75,9 @@ class Minesweeper extends Component {
     } = this.props;
 
     return (
-      <Fragment>
+    <Consumer>
+        {({ windowOrder, setActiveWindow }) => (
+        <Fragment>
         {windowOpen &&
           <Rnd
             default={{
@@ -85,6 +88,8 @@ class Minesweeper extends Component {
             minHeight={500}
             bounds='window'
             className={styles.rndOverlay}
+            onDragStart={() => setActiveWindow('minesweeper')}
+            style={{ zIndex: `100${windowOrder.indexOf('minesweeper')}`}}
           >
             <div className={styles.container}>
               <div className={styles.containerInner}>
@@ -103,7 +108,9 @@ class Minesweeper extends Component {
             </div>
           </Rnd>
         }
-      </Fragment>
+        </Fragment>
+      )}
+      </Consumer>
     );
   }
 }

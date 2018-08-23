@@ -8,38 +8,12 @@ class AppProvider extends Component {
   };
 
   setActiveWindow(windowKey) {
-    // if (this.state.windowOrder[windowKey]) {
-    //   if (this.state.windowOrder.length === 1) return;
-
-    //   const restOfKeys = this.state.windowOrder.filter(key => key !== windowKey);
-    //   restOfKeys.unshift(windowKey);
-
-    //   this.setState({ windowOrder: restOfKeys });
-    // }
-
-    // else {
-    //   this.setState({ windowOrder: [ ...this.state.windowOrder, windowKey]});
-    // }
-
-    if (this.state.windowOrder.length === 0) {
+    if (this.state.windowOrder.indexOf(windowKey) === -1) {
       this.setState({ windowOrder:[...this.state.windowOrder, windowKey]});
-      console.log(this.state.windowOrder);
       return;
     }
 
-    console.log(this.state.windowOrder.indexOf(windowKey) >= 0);
-    if(this.state.windowOrder.indexOf(windowKey) >= 0) {
-      this.setState({ windowOrder: [windowKey, ...this.state.windowOrder]});
-      console.log(this.state.windowOrder);
-      return;
-    } else {
-          const restOfKeys = this.state.windowOrder.filter(key => console.log(key));
-          console.log(restOfKeys);
-
-          this.setState({ windowOrder: [windowKey, ...restOfKeys] });
-          console.log(this.state.windowOrder);
-    }
-
+    this.setState({ windowOrder: [...this.state.windowOrder.filter(key => key !== windowKey), windowKey]});
   }
 
   render() {

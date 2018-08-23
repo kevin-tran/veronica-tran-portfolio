@@ -6,7 +6,7 @@ import styles from './index.module.scss'
 
 const Box = () => (
     <Consumer>
-        {({ activeWindow, setActiveWindow }) => (
+        {({ windowOrder, setActiveWindow }) => (
             <Rnd
             default={{
                 x: 600,
@@ -18,10 +18,11 @@ const Box = () => (
             minHeight={150}
             lockAspectRatio
             bounds='window'
-            onDragStart={() => setActiveWindow('Box')}
+            onDragStart={() => setActiveWindow('box')}
             className={styles.rndOverlay}
+            style={{ zIndex: `100${windowOrder.indexOf('box')}`}}
             >
-            <div className={activeWindow === 'Box' ? styles.boxActive : styles.box}>
+            <div className={styles.box}>
             <div className={styles.boxEdge} style={{ left: '-.4em', top: '-.4em' }} />
             <div className={styles.boxEdge} style={{ right: '-.4em', top: '-.4em' }} />
             <div className={styles.boxEdge} style={{ bottom: '-.4em', left: '-.4em' }} />
