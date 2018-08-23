@@ -12,9 +12,6 @@ const ProjectsPage = ({ data }) => (
       <Img fluid={data.thumbnail1.childImageSharp.fluid}  />
     </Link>
     <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail2.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
       <Img fluid={data.thumbnail3.childImageSharp.fluid}  />
     </Link>
     <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
@@ -51,49 +48,42 @@ export const query = graphql`
 query {
   thumbnail1: file(relativePath: { eq: "thumbnails/ch-feature-thumbnail.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
-  }
-  thumbnail2: file(relativePath: { eq: "thumbnails/odyssey-feature-thumbnail.png" }) {
-    childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
+      fluid(maxWidth: 1000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail3: file(relativePath: { eq: "thumbnails/fc-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
+      fluid(maxWidth: 1000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail4: file(relativePath: { eq: "thumbnails/ca-feature-thumbnail.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
+      fluid(maxWidth: 1000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail5: file(relativePath: { eq: "thumbnails/iso-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
+      fluid(maxWidth: 1000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail6: file(relativePath: { eq: "thumbnails/cad-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
+      fluid(maxWidth: 1000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnail7: file(relativePath: { eq: "thumbnails/mesh-feature-thumbnail.png" }) {
     childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
+      fluid(maxWidth: 1000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }

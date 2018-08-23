@@ -4,6 +4,7 @@
     height: 100%;
     position: relative;
     display: block;
+    animation: fadeInOpacity .5s;
 }
 
 .rndOverlay {
@@ -26,4 +27,13 @@
     .rndOverlay {
         display: none !important;
     }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

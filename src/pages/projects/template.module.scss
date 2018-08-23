@@ -16,8 +16,22 @@
 }
 
 .contentContainer {
-    max-width: 20em;
+    flex-basis: 100%;
+
+    &:first-child {
+        flex-basis: 70%;
+    }
+
     margin-right: 1.2em;
+
+    >*:first-child {
+        margin-bottom: 1.5em;
+    }
+
+    p {
+        line-height: 150%;
+        margin: .4em 0;
+    }
 }
 
 .projectImage {
@@ -40,24 +54,16 @@
 
     .headerContainer {
         flex-direction: row;
-
-        >* {
-            flex-basis: 50%;
-        }
     }
 }
 
 @media only screen and (min-width: '1200px') {
     .headerContainer {
         flex-direction: row;
-
-        >* {
-            flex-basis: 30%;
-        }
     }
 
     .container {
-        padding: 4em 15em;
+        padding: 6em 15em;
     }
 }
 

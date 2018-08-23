@@ -20,19 +20,15 @@ class ContemporaryHotelsPage extends React.Component {
       <div className={styles.container}>
         <div>
           <section className={styles.headerContainer}>
-            <div>
+            <div className={styles.contentContainer}>
               <p><b>Contemporary Hotels</b></p>
-              <p>Project Subheading</p>
-            </div>
-  
-            <div className={styles.contentContainer}>
-              <p>UX, UI, ILLUSTRATION, MOTION</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-  
-            <div className={styles.contentContainer}>
+              <p>CATEGORY: UX, UI, ILLUSTRATION, MOTION</p>
               <p>AGENCY: LIQUID</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+  
+            <div className={styles.contentContainer}>
+              <p><b>Luxurious hotel booking experience</b></p>
+              <p>Enhanced digital presence for Sydney based luxury accommodation specialists 'Contemporary Hotels', utilising a comprehensive property search, alongside a high-end showcase of their homes.</p>
             </div>
           </section>
         </div>
@@ -53,35 +49,35 @@ export const query = graphql`
 query {
   galleryImage1: file(relativePath: { eq: "ch/ch-1.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000, quality: 100) {
+      fluid(maxWidth: 3000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage2: file(relativePath: { eq: "ch/ch-2.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000, quality: 100) {
+      fluid(maxWidth: 3000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage4: file(relativePath: { eq: "ch/ch-4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000, quality: 100) {
+      fluid(maxWidth: 3000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage5: file(relativePath: { eq: "ch/ch-5.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000, quality: 100) {
+      fluid(maxWidth: 3000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   galleryImage6: file(relativePath: { eq: "ch/ch-6.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 3000, quality: 100) {
+      fluid(maxWidth: 3000, quality: 70) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
