@@ -22,8 +22,8 @@ class ContemporaryHotelsPage extends React.Component {
           <section className={styles.headerContainer}>
             <div className={styles.contentContainer}>
               <p><b>Contemporary Hotels</b></p>
-              <p>CATEGORY: UX, UI, ILLUSTRATION, MOTION</p>
-              <p>AGENCY: LIQUID</p>
+              <p className={styles.subtitle}>UX, UI, ILLUSTRATION, MOTION</p>
+              <p className={styles.subtitle}>AGENCY: LIQUID</p>
             </div>
   
             <div className={styles.contentContainer}>

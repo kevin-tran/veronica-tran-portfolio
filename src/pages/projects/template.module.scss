@@ -20,6 +20,10 @@
 
     &:first-child {
         flex-basis: 70%;
+
+        .subtitle {
+            font-size: .8em;
+        }
     }
 
     margin-right: 1.2em;
