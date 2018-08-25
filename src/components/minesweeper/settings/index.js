@@ -35,7 +35,6 @@ class Settings extends Component {
   }
 
   render() {
-
     return (
       <div className={styles.relative}>
         <div className={styles.titleBar}>
@@ -75,7 +74,6 @@ Settings.defaultProps = {
 
 Settings.propTypes = {
   onReset: PropTypes.func,
-  isTicking: PropTypes.bool,
   isOpening: PropTypes.bool,
   difficulty: PropTypes.string,
   appActions: PropTypes.object,

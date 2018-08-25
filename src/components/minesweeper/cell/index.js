@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 import styles from './index.module.scss'
 
-class Cell extends Component {
+class Cell extends PureComponent {
   constructor(props) {
     super(props);
 

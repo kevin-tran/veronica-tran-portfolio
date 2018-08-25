@@ -31,7 +31,6 @@ class BoardComponent extends Component {
   render() {
     const {
       hasWon,
-      isTicking,
       mineCount,
       minesLeft,
       timeSpent,
@@ -46,7 +45,6 @@ class BoardComponent extends Component {
         />
         <Controls
           hasWon={hasWon}
-          isTicking={isTicking}
           mineCount={mineCount}
           minesLeft={minesLeft}
           timeSpent={timeSpent}
@@ -85,7 +83,6 @@ BoardComponent.defaultProps = {
   onMouseDown() { },
   onMouseUp() { },
   isGameOver: false,
-  isTicking: false,
   mineCount: 10,
   columns: 9,
   rows: 9
@@ -96,7 +93,6 @@ BoardComponent.propTypes = {
   columns: PropTypes.number,
   mineCount: PropTypes.number,
   hasWon: PropTypes.bool,
-  isTicking: PropTypes.bool,
   isGameOver: PropTypes.bool,
   onMouseUp: PropTypes.func,
   onMouseDown: PropTypes.func,

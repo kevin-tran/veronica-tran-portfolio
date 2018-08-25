@@ -1,9 +1,49 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as appActionCreators from '../../../state/actions/app';
 
 import styles from './index.module.scss';
 
+const TASK = Symbol();
+
 class Controls extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.tick = this.tick.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (!this.props.isTicking && nextProps.isTicking) {
+      clearInterval(this[TASK]);
+      this[TASK] = setInterval(this.tick, 1000);
+    }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this[TASK]);
+  }
+
+  handleReset() {
+    if (this.props.isTicking) {
+      this.props.appActions.endGame();
+    }
+
+    this.props.appActions.newGame();
+  }
+
+  tick() {
+    if (!this.props.isTicking) {
+      return;
+    }
+
+    this.props.appActions.incrementTime();
+  }
+
   render() {
     const {
       minesLeft,
@@ -44,10 +84,26 @@ Controls.defaultProps = {
 Controls.propTypes = {
   onReset: PropTypes.func,
   minesLeft: PropTypes.number,
-  hasWon: PropTypes.bool,
   isTicking: PropTypes.bool,
-  isGameOver: PropTypes.bool,
   timeSpent: PropTypes.number
 };
 
-export default Controls;
+function mapStateToProps(state) {
+  return {
+    timeSpent: state.get('timeSpent'),
+    isTicking: state.get('isTicking'),
+    minesLeft: state.get('minesLeft')
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    appActions: bindActionCreators(appActionCreators, dispatch)
+  };
+}
+
+Controls.propTypes = {
+  boardActions: PropTypes.object
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Controls);

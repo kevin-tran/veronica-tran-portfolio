@@ -6,10 +6,16 @@
     height: 100%;
     width: 100%;
     background-color: white;
+    transition: .5s ease;
+    transform: scale(0);
 }
 
 .rndOverlay {
     z-index: 2;
+}
+
+.rndOverlayClose {
+    z-index: -100 !important;
 }
 
 .containerWindow {
@@ -22,28 +28,25 @@
     height: 100%;
 }
 
-.scale-enter {
-    opacity: 0.01;
-    transform: scale(0.9);
-}
-
-.scale-enter-active {
-    opacity: 1;
+.enterDone {
     transform: scale(1);
 }
 
-.scale-exit {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.scale-exit-active {
-    opacity: 0;
+.exit, .exitActive, .exitDone {
     transform: scale(0);
 }
 
 @media only screen and (max-width: '768px') {
     .rndOverlay {
         display: none !important;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
     }
 }
