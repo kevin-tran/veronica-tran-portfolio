@@ -5,7 +5,6 @@ import Header from '../header'
 import Nav from '../nav'
 import Minesweeper from '../minesweeper'
 
-import '../../utils/eventListenerPolyfill'
 import './index.scss'
 import '../../fonts/space-grotesk-regular.woff2'
 
