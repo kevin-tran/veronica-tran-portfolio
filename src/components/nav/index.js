@@ -21,7 +21,7 @@ class Nav extends React.Component {
 
     handleScroll = Throttle(() => {
         this.setState({ scrollPos: window.pageYOffset, scrollDirection: window.pageYOffset < this.state.scrollPos ? 'up' : 'down' });
-    }, 100);
+    }, 50);
 
     componentDidMount() {
         this.handleScroll();
