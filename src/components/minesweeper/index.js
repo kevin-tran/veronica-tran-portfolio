@@ -49,8 +49,8 @@ class Minesweeper extends PureComponent {
         {({ windowOrder, setActiveWindow }) => (
               <Rnd
                 default={{
-                  x: 100,
-                  y: 90,
+                  x: 150,
+                  y: 180,
                 }}
                 minWidth={500}
                 minHeight={500}

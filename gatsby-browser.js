@@ -25,6 +25,7 @@ export const onRouteUpdate = () => {
   if (typeof window !== 'undefined') { window.scrollTo(0, 0) }
 }
 
-export const shouldUpdateScroll = args => {
+export const shouldUpdateScroll = () => {
+  if (typeof window !== 'undefined') { window.scrollTo(0, 0) };
   return false;
 };
