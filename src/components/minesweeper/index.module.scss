@@ -38,7 +38,7 @@
 }
 
 @media only screen and (max-width: '768px') {
-    .rndOverlay {
+    .rndOverlay, .rndOverlayClose {
         display: none !important;
     }
 }
