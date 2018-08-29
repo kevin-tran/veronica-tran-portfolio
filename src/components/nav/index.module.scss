@@ -178,7 +178,7 @@
     }
 
     .navLinks {
-        left: 16em;
+        left: 12em;
     }
 
     .mobileNav {
@@ -200,11 +200,12 @@
     }
 }
 
-@media only screen and (min-width: '1400px') {
+@media only screen and (min-width: '1200px') {
     .navLinks {
         left: 20em;
     }
 }
+
 
 @media only screen and (min-width: '1800px') {
 
