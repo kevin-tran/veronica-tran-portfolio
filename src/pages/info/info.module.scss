@@ -41,13 +41,13 @@
     .container {
         padding: 0 5em;
         align-self: center;
+        display: flex;
     }
 }
 
 @media only screen and (min-width: '1200px') {
     .container {
-        display: flex;
-        padding: 0 15em;
+        padding: 0 8em;
     }
 }
 

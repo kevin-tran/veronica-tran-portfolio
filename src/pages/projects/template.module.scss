@@ -19,8 +19,11 @@
     flex-basis: 100%;
 
     &:first-child {
-        flex-basis: 70%;
+        flex-basis: 100%;
 
+        > * {
+            padding-left: 12rem;
+        }
         .subtitle {
             font-size: .8em;
             letter-spacing: 1px;
@@ -54,7 +57,7 @@
 
 @media only screen and (min-width: '768px') {
     .container {
-        padding: 4em 10em;
+        padding: 4em 8em;
 
         >* {
             margin-bottom: 3em;
@@ -72,15 +75,14 @@
     }
 
     .container {
-        padding: 6em 15em;
+        padding: 6em 8em;
     }
 }
 
 @media only screen and (min-width: '1800px') {
 
     .container {
-        padding: 10em 20em;
-        max-width: 1000px;
+        padding: 10em 8em;
     }
 }
 
