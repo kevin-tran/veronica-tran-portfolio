@@ -4,8 +4,7 @@ import Button from '../button'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { Consumer } from '../../state/context/createContext'
-import Throttle from '../../utils/throttle';
+import { Consumer } from '../../state/context/createContext';
 import * as appActionCreators from '../../state/actions/app';
 
 import styles from './index.module.scss'
@@ -16,13 +15,19 @@ class Nav extends React.Component {
         scrollPos: 0
     }
 
+    constructor(props) {
+        super(props);
+
+        this.handleScroll = this.handleScroll.bind(this);
+    }
+
     handleClose(windowOpen) {
         this.props.appActions.toggleWindow(windowOpen);
     }
 
-    handleScroll = Throttle(() => {
+    handleScroll() {
         this.setState({ scrollPos: window.pageYOffset, scrollDirection: window.pageYOffset < this.state.scrollPos ? 'up' : 'down' });
-    }, 50);
+    }
 
     componentDidMount() {
         this.handleScroll();
