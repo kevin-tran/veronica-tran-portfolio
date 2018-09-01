@@ -15,7 +15,6 @@ function mapStateToProps(state) {
   return {
     board: state.get('board'),
     hasWon: state.get('hasWon'),
-    timeSpent: state.get('timeSpent'),
     mineCount: state.get('mineCount'),
     minesLeft: state.get('minesLeft'),
     isGameOver: state.get('isGameOver'),

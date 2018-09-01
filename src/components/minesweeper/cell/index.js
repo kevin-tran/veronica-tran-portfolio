@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
 import styles from './index.module.scss'
 
-class Cell extends PureComponent {
+class Cell extends Component {
   constructor(props) {
     super(props);
 
@@ -29,6 +29,8 @@ class Cell extends PureComponent {
       [styles.cellOpened]: isOpened,
       [styles.flag]: hasFlag && !isOpened && !isGameOver
     });
+
+    console.log('rendering');
 
     return (
       <div

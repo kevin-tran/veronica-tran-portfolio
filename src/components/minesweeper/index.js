@@ -95,14 +95,12 @@ Minesweeper.propTypes = {
   isGameOver: PropTypes.bool,
   mineCount: PropTypes.number,
   minesLeft: PropTypes.number,
-  timeSpent: PropTypes.number,
   appActions: PropTypes.object
 };
 
 function mapStateToProps(state) {
   return {
     hasWon: state.get('hasWon'),
-    timeSpent: state.get('timeSpent'),
     mineCount: state.get('mineCount'),
     minesLeft: state.get('minesLeft'),
     isGameOver: state.get('isGameOver'),

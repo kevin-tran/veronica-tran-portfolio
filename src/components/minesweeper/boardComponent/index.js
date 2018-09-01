@@ -33,7 +33,6 @@ class BoardComponent extends Component {
       hasWon,
       mineCount,
       minesLeft,
-      timeSpent,
       isOpening 
     } = this.props;
 
@@ -47,7 +46,6 @@ class BoardComponent extends Component {
           hasWon={hasWon}
           mineCount={mineCount}
           minesLeft={minesLeft}
-          timeSpent={timeSpent}
           onReset={this.handleReset}
         />
 
