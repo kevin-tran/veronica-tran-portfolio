@@ -45,8 +45,6 @@ class Nav extends React.Component {
     }
 
     componentDidMount() {
-        this.handleScroll();
-
         window.addEventListener('scroll', this.handleScroll, {
             capture: true,
             passive: true
