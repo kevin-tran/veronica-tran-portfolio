@@ -45,29 +45,30 @@ class Minesweeper extends PureComponent {
     } = this.props;
 
     return (
-      <Consumer>
-        {({ windowOrder, setActiveWindow }) => (
-              <Rnd
-                default={{
-                  x: 150,
-                  y: 180,
-                }}
-                minWidth={500}
-                minHeight={500}
-                bounds='window'
-                className={windowOpen ? styles.rndOverlay : styles.rndOverlayClose}
-                onDragStart={() => setActiveWindow('minesweeper')}
-                style={{ zIndex: `100${windowOrder.indexOf('minesweeper')}` }}
-              >
-              <CSSTransition
-              in={windowOpen}
-              classNames={{
-                enterDone: styles.enterDone,
-                exit: styles.exit,
-                exitActive: styles.exitActive,
-                exitDone: styles.exitDone
+        <Consumer>
+          {({ windowOrder, setActiveWindow }) => (
+            <Rnd
+              default={{
+                x: 50,
+                y: 50,
               }}
-              timeout={0}>
+              minWidth={500}
+              minHeight={500}
+              bounds='window'
+              className={windowOpen ? styles.rndOverlay : styles.rndOverlayClose}
+              onDragStart={() => setActiveWindow('minesweeper')}
+              style={{ zIndex: `100${windowOrder.indexOf('minesweeper')}` }}
+              onResizeStop={() => setActiveWindow('minesweeper')}
+            >
+              <CSSTransition
+                in={windowOpen}
+                classNames={{
+                  enterDone: styles.enterDone,
+                  exit: styles.exit,
+                  exitActive: styles.exitActive,
+                  exitDone: styles.exitDone
+                }}
+                timeout={0}>
                 <div className={styles.container}>
                   <div className={styles.containerInner}>
                     <div className={styles.containerWindow}>
@@ -82,10 +83,10 @@ class Minesweeper extends PureComponent {
                     </div>
                   </div>
                 </div>
-                </CSSTransition>
-              </Rnd>
-        )}
-      </Consumer>
+              </CSSTransition>
+            </Rnd>
+          )}
+        </Consumer>
     );
   }
 }

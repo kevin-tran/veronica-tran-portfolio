@@ -30,8 +30,6 @@ class Cell extends Component {
       [styles.flag]: hasFlag && !isOpened && !isGameOver
     });
 
-    console.log('rendering');
-
     return (
       <div
         className={className}

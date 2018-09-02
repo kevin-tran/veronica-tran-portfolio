@@ -20,8 +20,8 @@ const InfoPage = () => (
       </Fragment>
     </div>
     <div className={styles.infoContainer}>
-      <p>I craft compelling design solutions, rooted in<br />conceptual ideas combined with distilled<br />aesthetics. I work across digital, publications,<br />exhibitions, identities, typefaces and more.</p>
-      <p>I'm interested in the intersections of art, design,<br />media, popular culture and technology.</p>
+      <p>I craft compelling design solutions, rooted in <br />conceptual ideas combined with distilled <br />aesthetics. I work across digital, publications, <br />exhibitions, identities, typefaces and more.</p>
+      <p>I'm interested in the intersections of art, design, <br />media, popular culture and technology.</p>
 
       <table className={styles.table}>
         <tbody>

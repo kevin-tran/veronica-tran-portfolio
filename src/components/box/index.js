@@ -9,8 +9,8 @@ const Box = () => (
         {({ windowOrder, setActiveWindow }) => (
             <Rnd
             default={{
-                x: 600,
-                y: 400,
+                x: 500,
+                y: 220,
                 width: 400,
                 height: 300,
             }}
@@ -19,6 +19,7 @@ const Box = () => (
             lockAspectRatio
             bounds='window'
             onDragStart={() => setActiveWindow('box')}
+            onResizeStop={() => setActiveWindow('box')}
             className={styles.rndOverlay}
             style={{ zIndex: `100${windowOrder.indexOf('box')}`}}
             >

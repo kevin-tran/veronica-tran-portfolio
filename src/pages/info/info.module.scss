@@ -9,6 +9,11 @@
 .infoContainer {
     line-height: 1.4;
     margin-left: auto;
+    margin-bottom: 4em;
+
+    br {
+        display: none;
+    }
 }
 
 .table {
@@ -19,7 +24,7 @@
     }
 
     td {
-        line-height: 1;
+        line-height: 1.4;
     }
 }
 
@@ -42,6 +47,20 @@
         padding: 0 5em;
         align-self: center;
         display: flex;
+    }
+
+    .infoContainer {
+        margin-bottom: 0;
+
+        br {
+            display: block;
+        }
+    }
+
+    .table {
+        td {
+            line-height: 1;
+        }
     }
 }
 

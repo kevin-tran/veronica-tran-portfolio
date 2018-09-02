@@ -9,8 +9,8 @@ const WindowSVG = () => (
         {({ windowOrder, setActiveWindow }) => (
             <Rnd
                 default={{
-                    x: 550,
-                    y: 150,
+                    x: 400,
+                    y: 100,
                     width: 300,
                     height: 400,
                 }}
@@ -19,6 +19,7 @@ const WindowSVG = () => (
                 lockAspectRatio
                 bounds='window'
                 onDragStart={() => setActiveWindow('window')}
+                onResizeStop={() => setActiveWindow('window')}
                 className={styles.rndOverlay}
                 style={{ zIndex: `100${windowOrder.indexOf('window')}` }}
             >
