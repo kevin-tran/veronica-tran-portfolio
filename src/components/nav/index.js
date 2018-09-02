@@ -18,7 +18,7 @@ class Nav extends React.Component {
     constructor(props) {
         super(props);
 
-        this.scrollPos = typeof window !== 'undefined' && window.pageYOffset || 0;
+        this.scrollPos = (typeof window !== 'undefined' && window.pageYOffset) || 0;
 
         this.handleScroll = this.handleScroll.bind(this);
     }
@@ -56,10 +56,8 @@ class Nav extends React.Component {
     }
 
     render() {
-
         const { scrollDirection, hasScrolled } = this.state;
         const { newGame } = this.props.appActions;
-        console.log(hasScrolled);
 
         return (
             <Consumer>

@@ -23,11 +23,6 @@ const WindowSVG = () => (
                 style={{ zIndex: `100${windowOrder.indexOf('window')}` }}
             >
                 <svg className={styles.container}>
-                    <svg width='.7em' height='.7em' viewBox='0 0 20 19' className={styles.closeIcon}>
-                        <g stroke="#000" fill="none" fillRule="evenodd" strokeLinecap="square">
-                            <path d="M.83333333 18.1666667L18.5110029.48899714M19.16666667 18.1666667L1.4889971.48899714" />
-                        </g>
-                    </svg>
                     <line x1='0' y1='2em' x2='100%' y2='2em'
                         style={{ stroke: '#000', strokeWidth: 1 }} />
                     <line x1='0' y1='100%' x2='100%' y2='2em'
