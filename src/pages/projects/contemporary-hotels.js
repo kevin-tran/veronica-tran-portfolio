@@ -40,13 +40,13 @@ class ContemporaryHotelsPage extends React.Component {
         <Img fluid={data.galleryImage6.childImageSharp.fluid} className={styles.placeholder} />
 
         <div className={styles.thumbnailContainer}>
-          <div>
+          <div className={styles.thumbnailItem}>
             <p>Carazo</p>
-            <Img fixed={data.thumbnailPrev.childImageSharp.fixed} className={styles.thumbnail} />
+            <Img fluid={data.thumbnailPrev.childImageSharp.fluid} className={styles.thumbnail} />
           </div>
-          <div>
+          <div className={styles.thumbnailItem}>
             <p>Carazo</p>
-            <Img fixed={data.thumbnailNext.childImageSharp.fixed} className={styles.thumbnail} />
+            <Img fluid={data.thumbnailNext.childImageSharp.fluid} className={styles.thumbnail} />
           </div>
         </div>
       </div>
@@ -95,15 +95,15 @@ query {
   }
   thumbnailNext: file(relativePath: { eq: "thumbnails/fc-feature-thumbnail.png" }) {
     childImageSharp {
-      fixed(width: 400, quality: 100) {
-        ...GatsbyImageSharpFixed_withWebp_noBase64
+      fluid(maxWidth: 300, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
   thumbnailPrev: file(relativePath: { eq: "thumbnails/fc-feature-thumbnail.png" }) {
     childImageSharp {
-      fixed(width: 400, quality: 100) {
-        ...GatsbyImageSharpFixed_withWebp_noBase64
+      fluid(maxWidth: 300, quality: 100) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }

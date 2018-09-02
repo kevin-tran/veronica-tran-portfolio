@@ -56,17 +56,15 @@
 }
 
 .thumbnailContainer {
-    margin-top: 5em;
-    margin-bottom: 3em;
+    margin: 3em 0;
 
     >* {
         display: inline-block;
     }
+}
 
-    >*:nth-child(2) {
-        text-align: right;
-        float: right;
-    }
+.thumbnailItem {
+    width: 100%;
 }
 
 .thumbnail {
@@ -94,6 +92,18 @@
     .headerContainer {
         flex-direction: row;
     }
+
+    .thumbnailItem {
+        min-width: 200px;
+        width: auto;
+    }
+
+    .thumbnailContainer {
+        >*:nth-child(2) {
+            text-align: right;
+            float: right;
+        }
+    }
 }
 
 @media only screen and (min-width: '1200px') {
@@ -114,8 +124,8 @@
         }
     }
 
-    .thumbnail {
-        max-width: 400px;
+    .thumbnailItem {
+        min-width: 300px;
     }
 }
 
