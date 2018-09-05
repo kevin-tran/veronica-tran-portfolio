@@ -7,7 +7,7 @@ import Img from 'gatsby-image';
 import styles from './template.module.scss';
 
 
-class ContemporaryHotelsPage extends React.Component {
+class CadigalPage extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -22,23 +22,22 @@ class ContemporaryHotelsPage extends React.Component {
         <div>
           <section className={styles.headerContainer}>
             <div className={styles.contentContainer}>
-              <p><b>Contemporary Hotels</b></p>
-              <p className={styles.subtitle}>UX, UI, ILLUSTRATION, MOTION</p>
+              <p><b>Cadigal</b></p>
+              <p className={styles.subtitle}>UI/UX</p>
               <p className={styles.subtitle}>AGENCY: LIQUID</p>
             </div>
 
             <div className={styles.contentContainer}>
               <p><b>Luxurious hotel booking experience</b></p>
-              <p>Enhanced digital presence for Sydney based luxury accommodation specialists 'Contemporary Hotels', utilising a comprehensive property search, alongside a high-end showcase of their homes.</p>
+              <p>Design of Sydney based office leasing specialists that highlights a modern, edgy, and premium aesthetic.</p>
             </div>
           </section>
         </div>
 
         <Img fluid={data.galleryImage1.childImageSharp.fluid} className={styles.placeholder} />
         <Img fluid={data.galleryImage2.childImageSharp.fluid} className={styles.placeholder} />
-        <Img fluid={data.galleryImage4.childImageSharp.fluid} className={styles.placeholder} />
+        <Img fluid={data.galleryImage3.childImageSharp.fluid} className={styles.placeholder} />
         <Img fluid={data.galleryImage5.childImageSharp.fluid} className={styles.placeholder} />
-        <Img fluid={data.galleryImage6.childImageSharp.fluid} className={styles.placeholder} />
 
         <div className={styles.thumbnailContainer}>
           <Link to='/test'>
@@ -60,39 +59,32 @@ class ContemporaryHotelsPage extends React.Component {
   }
 }
 
-export default ContemporaryHotelsPage
+export default CadigalPage
 
 export const query = graphql`
 query {
-  galleryImage1: file(relativePath: { eq: "ch/ch-1.jpg" }) {
+  galleryImage1: file(relativePath: { eq: "cadi/cadi-1.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000, quality: 100) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
-  galleryImage2: file(relativePath: { eq: "ch/ch-2.jpg" }) {
+  galleryImage2: file(relativePath: { eq: "cadi/cadi-2.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000, quality: 100) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
-  galleryImage4: file(relativePath: { eq: "ch/ch-4.jpg" }) {
+  galleryImage3: file(relativePath: { eq: "cadi/cadi-3.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000, quality: 100) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
-  galleryImage5: file(relativePath: { eq: "ch/ch-5.jpg" }) {
-    childImageSharp {
-      fluid(maxWidth: 3000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
-  }
-  galleryImage6: file(relativePath: { eq: "ch/ch-6.jpg" }) {
+  galleryImage5: file(relativePath: { eq: "cadi/cadi-5.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 3000, quality: 100) {
         ...GatsbyImageSharpFluid_withWebp_noBase64

@@ -8,36 +8,38 @@ import styles from './index.module.scss'
 const ProjectsPage = ({ data }) => (
   <div className={styles.projectContainer}>
     <div className={styles.projectRow}>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail1.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail3.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail4.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail5.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail6.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail7.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail8.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail9.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail10.childImageSharp.fluid}  />
-    </Link>
-    <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-      <Img fluid={data.thumbnail11.childImageSharp.fluid}  />
-    </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail1.childImageSharp.fluid} />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail2.childImageSharp.fluid} />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail3.childImageSharp.fluid} />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
+        <img src={data.thumbnail4.publicURL} className={styles.imageThumb} alt='carazo thumbnail' />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail5.childImageSharp.fluid} />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail6.childImageSharp.fluid} />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail7.childImageSharp.fluid} />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
+        <img src={data.thumbnail8.publicURL} className={styles.imageThumb} alt='ska thumbnail' />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail9.childImageSharp.fluid} />
+      </Link>
+      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+        <Img fluid={data.thumbnail10.childImageSharp.fluid} />
+      </Link>
     </div>
   </div>
 )
@@ -46,70 +48,62 @@ export default ProjectsPage
 
 export const query = graphql`
 query {
-  thumbnail1: file(relativePath: { eq: "thumbnails/ch-feature-thumbnail.jpg" }) {
+  thumbnail1: file(relativePath: { eq: "thumbnails/contemporary-hotels-feature.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail3: file(relativePath: { eq: "thumbnails/fc-feature-thumbnail.png" }) {
+  thumbnail2: file(relativePath: { eq: "thumbnails/odyssey-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail4: file(relativePath: { eq: "thumbnails/ca-feature-thumbnail.jpg" }) {
+  thumbnail3: file(relativePath: { eq: "thumbnails/isotype-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail5: file(relativePath: { eq: "thumbnails/iso-feature-thumbnail.png" }) {
+  thumbnail4: file(relativePath: { eq: "thumbnails/carazo-feature.gif" }) {
+    publicURL
+  }
+  thumbnail5: file(relativePath: { eq: "thumbnails/fab-city-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail6: file(relativePath: { eq: "thumbnails/cad-feature-thumbnail.png" }) {
+  thumbnail6: file(relativePath: { eq: "thumbnails/mesh-archive-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail7: file(relativePath: { eq: "thumbnails/mesh-feature-thumbnail.png" }) {
+  thumbnail7: file(relativePath: { eq: "thumbnails/unbound-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail8: file(relativePath: { eq: "thumbnails/unbound-feature-thumbnail.png" }) {
+  thumbnail8: file(relativePath: { eq: "thumbnails/skagen-feature.gif" }) {
+    publicURL
+  }
+  thumbnail9: file(relativePath: { eq: "thumbnails/wikipedia-fragments-feature.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail9: file(relativePath: { eq: "thumbnails/drift-feature-thumbnail.png" }) {
-    childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
-  }
-  thumbnail10: file(relativePath: { eq: "thumbnails/ska-feature-thumbnail.png" }) {
-    childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
-  }
-  thumbnail11: file(relativePath: { eq: "thumbnails/wikifrags-feature-thumbnail.png" }) {
+  thumbnail10: file(relativePath: { eq: "thumbnails/cadigal-feature.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
         ...GatsbyImageSharpFluid_noBase64

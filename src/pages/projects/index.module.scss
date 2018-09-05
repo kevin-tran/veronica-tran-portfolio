@@ -22,6 +22,14 @@
     }
 }
 
+.imageThumb {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+}
+
 @media only screen and (min-width: '768px') {
     .projectContainer {
         padding: 4em 8em;
