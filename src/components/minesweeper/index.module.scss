@@ -6,8 +6,7 @@
     height: 100%;
     width: 100%;
     background-color: white;
-    transition: .5s ease;
-    transform: scale(0);
+    transition: transform .5s ease;
 }
 
 .rndOverlay {
@@ -35,7 +34,7 @@
 }
 
 .enterDone {
-    transform: scale(1);
+    opacity: 1;
 }
 
 .exit, .exitActive, .exitDone {
@@ -48,11 +47,11 @@
     }
 }
 
-@keyframes scaleIn {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

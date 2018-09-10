@@ -1,6 +1,7 @@
 .topLeft, .bottomRight, .topRight, .navLinks, .verticalNav {
     will-change: opacity;
     z-index: 1;
+    display: inline-block;
 
     a {
         &:hover:after {
@@ -21,6 +22,31 @@
             transition: all .3s ease-in-out 0s;
         }
     }
+}
+
+.slideInContainer {
+    overflow: hidden;
+    display: inline-block;
+    line-height: inherit;
+}
+
+.slideInContent {
+    display: inline-block;
+    transform: translate(0, 135%);
+    animation: slide-up-fade-in 600ms ease 0ms 1 normal forwards running;
+}
+
+@keyframes slide-up-fade-in {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+    
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
 }
 
 .topLeft {

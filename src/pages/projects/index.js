@@ -12,14 +12,14 @@ const ProjectsPage = ({ data }) => (
         <Img fluid={data.thumbnail1.childImageSharp.fluid} />
       </Link>
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-        <Img fluid={data.thumbnail2.childImageSharp.fluid} />
+        <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
+        <img src={data.thumbnail2.publicURL} className={styles.imageThumb} alt='carazo thumbnail' />
       </Link>
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
         <Img fluid={data.thumbnail3.childImageSharp.fluid} />
       </Link>
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-        <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
-        <img src={data.thumbnail4.publicURL} className={styles.imageThumb} alt='carazo thumbnail' />
+        <Img fluid={data.thumbnail4.childImageSharp.fluid} />
       </Link>
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
         <Img fluid={data.thumbnail5.childImageSharp.fluid} />
@@ -28,17 +28,14 @@ const ProjectsPage = ({ data }) => (
         <Img fluid={data.thumbnail6.childImageSharp.fluid} />
       </Link>
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-        <Img fluid={data.thumbnail7.childImageSharp.fluid} />
+        <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
+        <img src={data.thumbnail7.publicURL} className={styles.imageThumb} alt='ska thumbnail' />
       </Link>
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-        <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
-        <img src={data.thumbnail8.publicURL} className={styles.imageThumb} alt='ska thumbnail' />
+        <Img fluid={data.thumbnail8.childImageSharp.fluid} />
       </Link>
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
         <Img fluid={data.thumbnail9.childImageSharp.fluid} />
-      </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
-        <Img fluid={data.thumbnail10.childImageSharp.fluid} />
       </Link>
     </div>
   </div>
@@ -55,55 +52,48 @@ query {
       }
     }
   }
-  thumbnail2: file(relativePath: { eq: "thumbnails/odyssey-feature.png" }) {
-    childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_noBase64
-      }
-    }
-  }
-  thumbnail3: file(relativePath: { eq: "thumbnails/isotype-feature.png" }) {
-    childImageSharp {
-      fluid(maxWidth: 1000, quality: 100) {
-        ...GatsbyImageSharpFluid_noBase64
-      }
-    }
-  }
-  thumbnail4: file(relativePath: { eq: "thumbnails/carazo-feature.gif" }) {
+  thumbnail2: file(relativePath: { eq: "thumbnails/carazo-feature.gif" }) {
     publicURL
   }
-  thumbnail5: file(relativePath: { eq: "thumbnails/fab-city-feature.png" }) {
+  thumbnail3: file(relativePath: { eq: "thumbnails/fab-city-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
         ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail6: file(relativePath: { eq: "thumbnails/mesh-archive-feature.png" }) {
+  thumbnail4: file(relativePath: { eq: "thumbnails/isotype-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
         ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail7: file(relativePath: { eq: "thumbnails/unbound-feature.png" }) {
+  thumbnail5: file(relativePath: { eq: "thumbnails/mesh-archive-feature.png" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
         ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail8: file(relativePath: { eq: "thumbnails/skagen-feature.gif" }) {
+  thumbnail6: file(relativePath: { eq: "thumbnails/unbound-feature.png" }) {
+    childImageSharp {
+      fluid(maxWidth: 1000, quality: 100) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+  thumbnail7: file(relativePath: { eq: "thumbnails/skagen-feature.gif" }) {
     publicURL
   }
-  thumbnail9: file(relativePath: { eq: "thumbnails/wikipedia-fragments-feature.jpg" }) {
+  thumbnail8: file(relativePath: { eq: "thumbnails/wikipedia-fragments-feature.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
         ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
-  thumbnail10: file(relativePath: { eq: "thumbnails/cadigal-feature.jpg" }) {
+  thumbnail9: file(relativePath: { eq: "thumbnails/cadigal-feature.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 1000, quality: 100) {
         ...GatsbyImageSharpFluid_noBase64
