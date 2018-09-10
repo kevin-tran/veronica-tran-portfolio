@@ -23,12 +23,16 @@ const InfoPage = () => (
       <p>I craft compelling design solutions, rooted in <br />conceptual ideas combined with distilled <br />aesthetics. I work across digital, publications, <br />exhibitions, identities, typefaces and more.</p>
       <p>I'm interested in the intersections of art, design, <br />media, popular culture and technology.</p>
 
+      <div className={styles.emailContainer}>
+        <Button link='mailto:nveronicatran@gmail.com' className={styles.hideMobile}>nveronicatran@gmail.com</Button>
+      </div>
+
       <table className={styles.table}>
         <tbody>
           <tr>
             <td>
               2018 -
-                    </td>
+            </td>
             <td>Masters of Design for Emergent Futures @ IAAC</td>
           </tr>
           <tr>

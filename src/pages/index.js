@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Fragment>
-        <Keyboard />
+        <Keyboard string={<div></div>} />
         <WindowSVG />
         <Box />
       </Fragment>

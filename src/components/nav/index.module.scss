@@ -51,7 +51,7 @@
 
 .topLeft {
     position: absolute;
-    top: 1.2em;
+    top: 1.1em;
     left: 1.2em;
 }
 
@@ -64,7 +64,7 @@
 .topRight {
     position: absolute;
     right: 1.2em;
-    top: 1.2em;
+    top: 1.1em;
 }
 
 .bottomRight {
@@ -124,7 +124,7 @@
 .navLinks {
     position: absolute;
     display: none;
-    top: 1.2em;
+    top: 1.1em;
 
     >*:not(:first-child) {
         margin: 0 1em;

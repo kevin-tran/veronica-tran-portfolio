@@ -49,11 +49,12 @@ class Minesweeper extends PureComponent {
           {({ windowOrder, setActiveWindow }) => (
             <Rnd
               default={{
-                x: 50,
-                y: 50,
+                x: 120,
+                y: 200,
               }}
-              minWidth={500}
-              minHeight={500}
+              minWidth={190}
+              minHeight={255}
+              enableResizing={false}
               bounds='window'
               className={windowOpen ? styles.rndOverlay : styles.rndOverlayClose}
               onDragStart={() => setActiveWindow('minesweeper')}

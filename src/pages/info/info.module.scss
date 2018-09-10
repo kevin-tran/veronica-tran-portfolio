@@ -16,15 +16,21 @@
     }
 }
 
+.emailContainer {
+    padding: 2em 0;
+}
+
 .table {
     padding-top: 1em;
 
-    td:not(:first-child) {
-        padding-left: 2.2em;
-    }
-
     td {
         line-height: 1.4;
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 1.2em;
+        display: block;
     }
 }
 
@@ -57,9 +63,25 @@
         }
     }
 
+    .emailContainer {
+        display: none;
+    }
+
     .table {
+        padding-top: 1em;
+    
+        td:not(:first-child) {
+            padding-left: 2.2em;
+        }
+    
         td {
+            display: table-cell;
             line-height: 1;
+        }
+
+        tr {
+            display: table-row;
+            padding-bottom: 0;
         }
     }
 }
