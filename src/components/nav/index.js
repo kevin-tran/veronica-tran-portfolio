@@ -98,7 +98,7 @@ class Nav extends React.Component {
                                     <Button link='mailto:nveronicatran@gmail.com' className={styles.hideMobile}>nveronicatran@gmail.com</Button>
                                     </span>
                                 </span>
-                                <span className={styles.slideInContainer}>
+                                <span className={`${styles.slideInContainer} ${styles.showMobile}`}>
                                     <span className={styles.slideInContent}>
                                     <Link to='/projects' activeClassName={styles.activeLink}>Projects</Link>
                                     </span>
