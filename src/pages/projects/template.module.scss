@@ -56,22 +56,31 @@
     width: 100%;
 }
 
+.imageThumb {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+}
+
 .thumbnailContainer {
     margin: 3em 0;
 
     >* {
-        display: inline-block;
+        display: block;
     }
 }
 
 .thumbnailItem {
     width: 100%;
+    position: relative;
 }
 
 .thumbnail {
     composes: placeholder;
 
-    max-width: 300px;
+    width: 100%;
 }
 
 .contentContainer {
@@ -102,6 +111,9 @@
     }
 
     .thumbnailContainer {
+        >* {
+            display: inline-block;
+        }
         >*:nth-child(2) {
             text-align: right;
             float: right;

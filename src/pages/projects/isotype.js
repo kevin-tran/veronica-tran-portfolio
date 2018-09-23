@@ -40,7 +40,7 @@ class IsotypePage extends React.Component {
                 <Img fluid={data.galleryImage5.childImageSharp.fluid} className={styles.placeholder} />
                 <Img fluid={data.galleryImage6.childImageSharp.fluid} className={styles.placeholder} />
                 <Img fluid={data.galleryImage7.childImageSharp.fluid} className={styles.placeholder} />
-                <img src={data.galleryImage8.publicURL} className={styles.placeholder} />
+                <img src={data.galleryImage8.publicURL} className={styles.placeholder} alt='iso gallery item 8' />
 
                 <div className={styles.thumbnailContainer}>
 

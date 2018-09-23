@@ -51,10 +51,11 @@ class IsotypePage extends React.Component {
                     </Link>
 
                     <Link to='/projects/skagen'>
-                        <p>Skagen</p>
-                        <div className={styles.thumbnailItem}>
-                        <img src={data.thumbnailNext.publicURL} className={styles.thumbnail} alt='carazo thumbnail' />
-                        </div>
+                      <p>Skagen</p>
+                      <div className={styles.thumbnailItem}>
+                        <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
+                        <img src={data.thumbnailNext.publicURL} className={styles.imageThumb} alt='skagen thumbnail' />
+                      </div>
                     </Link>
                 </div>
             </div>

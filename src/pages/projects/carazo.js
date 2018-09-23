@@ -34,12 +34,12 @@ class CarazoPage extends React.Component {
                     </section>
                 </div>
 
-                <img src={data.galleryImage1.publicURL} className={styles.placeholder} />
+                <img src={data.galleryImage1.publicURL} className={styles.placeholder} alt='carazo gallery item 1' />
                 <Img fluid={data.galleryImage2.childImageSharp.fluid} className={styles.placeholder} />
                 <Img fluid={data.galleryImage3.childImageSharp.fluid} className={styles.placeholder} />
                 <Img fluid={data.galleryImage4.childImageSharp.fluid} className={styles.placeholder} />
-                <img src={data.galleryImage5.publicURL} className={styles.placeholder} />
-                <img src={data.galleryImage6.publicURL} className={styles.placeholder} />
+                <img src={data.galleryImage5.publicURL} className={styles.placeholder} alt='carazo gallery item 5' />
+                <img src={data.galleryImage6.publicURL} className={styles.placeholder} alt='carazo gallery item 6'  />
                 <Img fluid={data.galleryImage7.childImageSharp.fluid} className={styles.placeholder} />
 
                 <div className={styles.thumbnailContainer}>

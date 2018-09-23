@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Rnd } from 'react-rnd';
 import { CSSTransition } from 'react-transition-group';
+import { MediaMatches } from "react-media-match";
 
 import * as appActionCreators from '../../state/actions/app';
 import { Consumer } from '../../state/context/createContext';
@@ -45,49 +46,53 @@ class Minesweeper extends PureComponent {
     } = this.props;
 
     return (
-        <Consumer>
-          {({ windowOrder, setActiveWindow }) => (
-            <Rnd
-              default={{
-                x: 120,
-                y: 200,
-              }}
-              minWidth={190}
-              minHeight={255}
-              enableResizing={false}
-              bounds='window'
-              className={windowOpen ? styles.rndOverlay : styles.rndOverlayClose}
-              onDragStart={() => setActiveWindow('minesweeper')}
-              style={{ zIndex: `100${windowOrder.indexOf('minesweeper')}` }}
-              onResizeStop={() => setActiveWindow('minesweeper')}
-            >
-              <CSSTransition
-                in={windowOpen}
-                classNames={{
-                  enterDone: styles.enterDone,
-                  exit: styles.exit,
-                  exitActive: styles.exitActive,
-                  exitDone: styles.exitDone
+      <MediaMatches>
+        {matches => (
+          <Consumer>
+            {({ windowOrder, setActiveWindow }) => (
+              <Rnd
+                default={{
+                  x: matches.desktop ? 120 : 40,
+                  y: matches.desktop ? 200 : 120,
                 }}
-                timeout={0}>
-                <div className={styles.container}>
-                  <div className={styles.containerInner}>
-                    <div className={styles.containerWindow}>
-                      <div className={styles.containerBoard}>
-                        <BoardContainer
-                          mineCount={mineCount}
-                          isGameOver={isGameOver}
-                          onMouseUp={this.handleCellBlur}
-                          onMouseDown={this.handleCellFocus}
-                        />
+                minWidth={190}
+                minHeight={255}
+                enableResizing={false}
+                bounds='window'
+                className={windowOpen ? styles.rndOverlay : styles.rndOverlayClose}
+                onDragStart={() => setActiveWindow('minesweeper')}
+                style={{ zIndex: `100${windowOrder.indexOf('minesweeper')}` }}
+                onResizeStop={() => setActiveWindow('minesweeper')}
+              >
+                <CSSTransition
+                  in={windowOpen}
+                  classNames={{
+                    enterDone: styles.enterDone,
+                    exit: styles.exit,
+                    exitActive: styles.exitActive,
+                    exitDone: styles.exitDone
+                  }}
+                  timeout={0}>
+                  <div className={styles.container}>
+                    <div className={styles.containerInner}>
+                      <div className={styles.containerWindow}>
+                        <div className={styles.containerBoard}>
+                          <BoardContainer
+                            mineCount={mineCount}
+                            isGameOver={isGameOver}
+                            onMouseUp={this.handleCellBlur}
+                            onMouseDown={this.handleCellFocus}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </CSSTransition>
-            </Rnd>
-          )}
-        </Consumer>
+                </CSSTransition>
+              </Rnd>
+            )}
+          </Consumer>
+        )}
+      </MediaMatches>
     );
   }
 }

@@ -46,7 +46,8 @@ class ContemporaryHotelsPage extends React.Component {
           <Link to='/projects/carazo'>
             <p>Carazo</p>
             <div className={styles.thumbnailItem}>
-              <img src={data.thumbnailNext.publicURL} className={styles.thumbnail} alt='carazo thumbnail' />
+              <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
+              <img src={data.thumbnailNext.publicURL} className={styles.imageThumb} alt='carazo thumbnail' />
             </div>
           </Link>
         </div>
