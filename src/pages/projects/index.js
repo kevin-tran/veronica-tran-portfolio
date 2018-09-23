@@ -11,30 +11,30 @@ const ProjectsPage = ({ data }) => (
       <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
         <Img fluid={data.thumbnail1.childImageSharp.fluid} />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/carazo' className={styles.projectCard}>
         <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
         <img src={data.thumbnail2.publicURL} className={styles.imageThumb} alt='carazo thumbnail' />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/fab-city' className={styles.projectCard}>
         <Img fluid={data.thumbnail3.childImageSharp.fluid} />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/isotype' className={styles.projectCard}>
         <Img fluid={data.thumbnail4.childImageSharp.fluid} />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/mesh-archive' className={styles.projectCard}>
         <Img fluid={data.thumbnail5.childImageSharp.fluid} />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/unbound' className={styles.projectCard}>
         <Img fluid={data.thumbnail6.childImageSharp.fluid} />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/skagen' className={styles.projectCard}>
         <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
         <img src={data.thumbnail7.publicURL} className={styles.imageThumb} alt='ska thumbnail' />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/wikifrags' className={styles.projectCard}>
         <Img fluid={data.thumbnail8.childImageSharp.fluid} />
       </Link>
-      <Link to='/projects/contemporary-hotels' className={styles.projectCard}>
+      <Link to='/projects/cadigal' className={styles.projectCard}>
         <Img fluid={data.thumbnail9.childImageSharp.fluid} />
       </Link>
     </div>

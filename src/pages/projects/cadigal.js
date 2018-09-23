@@ -23,7 +23,7 @@ class CadigalPage extends React.Component {
           <section className={styles.headerContainer}>
             <div className={styles.contentContainer}>
               <p><b>Cadigal</b></p>
-              <p className={styles.subtitle}>UI/UX</p>
+              <p className={styles.subtitle}>Category: UI/UX</p>
               <p className={styles.subtitle}>AGENCY: LIQUID</p>
             </div>
 
@@ -40,16 +40,16 @@ class CadigalPage extends React.Component {
         <Img fluid={data.galleryImage5.childImageSharp.fluid} className={styles.placeholder} />
 
         <div className={styles.thumbnailContainer}>
-          <Link to='/test'>
+          <Link to='/projects/wikifrags'>
             <div className={styles.thumbnailItem}>
-              <p>Cadigal</p>
+              <p>Wikifrags</p>
               <Img fluid={data.thumbnailPrev.childImageSharp.fluid} className={styles.thumbnail} />
             </div>
           </Link>
 
-          <Link to='/test'>
+          <Link to='/projects/contemporary-hotels'>
             <div className={styles.thumbnailItem}>
-              <p>Odyssey</p>
+              <p>Contemporary Hotels</p>
               <Img fluid={data.thumbnailNext.childImageSharp.fluid} className={styles.thumbnail} />
             </div>
           </Link>
@@ -91,14 +91,14 @@ query {
       }
     }
   }
-  thumbnailPrev: file(relativePath: { eq: "thumbnails/cadigal-feature.jpg" }) {
+  thumbnailPrev: file(relativePath: { eq: "thumbnails/wikipedia-fragments-feature.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 300, quality: 100) {
         ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }
-  thumbnailNext: file(relativePath: { eq: "thumbnails/odyssey-feature.png" }) {
+  thumbnailNext: file(relativePath: { eq: "thumbnails/contemporary-hotels-feature.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 300, quality: 100) {
         ...GatsbyImageSharpFluid_withWebp_noBase64

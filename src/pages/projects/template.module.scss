@@ -53,6 +53,7 @@
 
 .placeholder {
     background-color: #fafafa;
+    width: 100%;
 }
 
 .thumbnailContainer {
@@ -69,6 +70,8 @@
 
 .thumbnail {
     composes: placeholder;
+
+    max-width: 300px;
 }
 
 .contentContainer {

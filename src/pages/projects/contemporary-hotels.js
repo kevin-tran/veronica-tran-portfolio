@@ -41,17 +41,12 @@ class ContemporaryHotelsPage extends React.Component {
         <Img fluid={data.galleryImage6.childImageSharp.fluid} className={styles.placeholder} />
 
         <div className={styles.thumbnailContainer}>
-          <Link to='/test'>
-            <div className={styles.thumbnailItem}>
-              <p>Cadigal</p>
-              <Img fluid={data.thumbnailPrev.childImageSharp.fluid} className={styles.thumbnail} />
-            </div>
-          </Link>
+        <div></div>
 
-          <Link to='/test'>
+          <Link to='/projects/carazo'>
+            <p>Carazo</p>
             <div className={styles.thumbnailItem}>
-              <p>Odyssey</p>
-              <Img fluid={data.thumbnailNext.childImageSharp.fluid} className={styles.thumbnail} />
+              <img src={data.thumbnailNext.publicURL} className={styles.thumbnail} alt='carazo thumbnail' />
             </div>
           </Link>
         </div>
@@ -106,12 +101,8 @@ query {
       }
     }
   }
-  thumbnailNext: file(relativePath: { eq: "thumbnails/odyssey-feature.png" }) {
-    childImageSharp {
-      fluid(maxWidth: 300, quality: 100) {
-        ...GatsbyImageSharpFluid_withWebp_noBase64
-      }
-    }
+  thumbnailNext: file(relativePath: { eq: "thumbnails/carazo-feature.gif" }) {
+    publicURL
   }
 }
 `;
