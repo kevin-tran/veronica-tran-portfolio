@@ -53,7 +53,7 @@ class Minesweeper extends PureComponent {
               <Rnd
                 default={{
                   x: matches.desktop ? 120 : 40,
-                  y: matches.desktop ? 200 : 120,
+                  y: matches.desktop ? 100 : 120,
                 }}
                 minWidth={190}
                 minHeight={255}

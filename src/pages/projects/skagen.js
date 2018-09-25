@@ -39,7 +39,10 @@ class FabCityPage extends React.Component {
                 <Img fluid={data.galleryImage3.childImageSharp.fluid} className={styles.placeholder} />
                 <Img fluid={data.galleryImage4.childImageSharp.fluid} className={styles.placeholder} />
                 <Img fluid={data.galleryImage5.childImageSharp.fluid} className={styles.placeholder} />
-                <img src={data.galleryImage6.publicURL} className={styles.placeholder} alt='skagen portfolio item 6' />
+                <div className={styles.imageContainer}>
+                  <div style={{ width: '100%', paddingBottom: '56.25%' }}></div>
+                  <img src={data.galleryImage6.publicURL} className={styles.placeholder} alt='skagen item 6' />
+                </div>
 
                 <div className={styles.thumbnailContainer}>
 
