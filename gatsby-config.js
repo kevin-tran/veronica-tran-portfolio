@@ -1,47 +1,62 @@
-const config = require("./config/meta");
+const path = require("path");
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
 
 module.exports = {
   siteMetadata: {
-    title: config.siteTitle,
-    description: config.description,
-    siteUrl: config.siteUrl
+    title: `Kevin Tran`,
+    description: `Kevin Tran`,
+    author: `Kevin Tran`
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-next',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-emotion`,
+    "gatsby-plugin-netlify",
+    "gatsby-plugin-netlify-cache",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-layout",
       options: {
-        name: config.manifestName,
-        short_name: config.manifestShortName,
-        start_url: config.manifestStartUrl,
-        background_color: config.manifestBackgroundColor,
-        theme_color: config.manifestThemeColor,
-        display: config.manifestDisplay,
-        icons: [
-          {
-            src: '/favicons/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/favicons/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-        ],
-      },
+        component: require.resolve("./src/components/layout/layout")
+      }
     },
-    'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images/`,
-      },
+        name: `Kevin Tran`,
+        short_name: `kevin`,
+        start_url: `/`,
+        background_color: `#000`,
+        theme_color: `#000`,
+        display: `minimal-ui`
+      }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
+    {
+      resolve: "gatsby-plugin-emoji-favicon",
+      options: {
+        emoji: "✌️"
+      }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          components: path.resolve(__dirname, "src/components"),
+          global: path.resolve(__dirname, "src/global"),
+          utils: path.resolve(__dirname, "src/utils")
+        },
+        extensions: ["js"]
+      }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    }
   ]
-}
+};
