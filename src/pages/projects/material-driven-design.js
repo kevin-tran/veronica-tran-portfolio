@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 import styles from './template.module.scss'
 
-class FabCityPage extends React.Component {
+class CadigalPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
@@ -20,20 +20,24 @@ class FabCityPage extends React.Component {
           <section className={styles.headerContainer}>
             <div className={styles.contentContainer}>
               <p>
-                <b>Fab City</b>
+                <b>Material Driven Design</b>
               </p>
-              <p className={styles.subtitle}>Identity, UI/UX</p>
+              <p className={styles.subtitle}>MATERIALS, CIRCULAR ECONOMY</p>
             </div>
 
             <div className={styles.contentContainer}>
               <p>
-                <b>Assisting a community of makers and leaders</b>
+                <b>Giving new life to food waste</b>
               </p>
               <p>
-                Rebellious, impactful, community-focused, human, designed. Fab
-                City is an inclusive brand that stands for change, forward
-                thinking and activism. I assisted with extending their visual
-                language as well as designing a refreshed website.
+                Creating a 100% biodegradeable product through sourcing a local
+                food waste material – pineapple leaves and fibre, working in a
+                way that encourages developing a dialogue with the material
+                through making. The project aims to prolong the life cycle and
+                guaranteeing a reintegration into the environment through
+                biodegradation. The information is available in an open source
+                manner, so that the processes are replicable and democratically
+                accessible.
               </p>
             </div>
           </section>
@@ -55,18 +59,10 @@ class FabCityPage extends React.Component {
           fluid={data.galleryImage4.childImageSharp.fluid}
           className={styles.placeholder}
         />
-        <div className={styles.imageContainer}>
-          <div style={{ width: '100%', paddingBottom: '56.25%' }} />
-          <img
-            src={data.galleryImage5.publicURL}
-            className={styles.placeholder}
-            alt="fab city gallery item 5"
-          />
-        </div>
 
         <div className={styles.thumbnailContainer}>
-          <Link to="/projects/carazo">
-            <p>Carazo</p>
+          <Link to="/projects/fab-academy">
+            <p>Fab Academy</p>
             <div className={styles.thumbnailItem}>
               <div style={{ width: '100%', paddingBottom: '56.25%' }} />
               <img
@@ -77,9 +73,9 @@ class FabCityPage extends React.Component {
             </div>
           </Link>
 
-          <Link to="/projects/make-here">
-            <p>Make Here</p>
+          <Link to="/projects/cadigal">
             <div className={styles.thumbnailItem}>
+              <p>Cadigal</p>
               <Img
                 fluid={data.thumbnailNext.childImageSharp.fluid}
                 className={styles.thumbnail}
@@ -92,46 +88,45 @@ class FabCityPage extends React.Component {
   }
 }
 
-export default FabCityPage
+export default CadigalPage
 
 export const query = graphql`
   query {
-    galleryImage1: file(relativePath: { eq: "fc/fc-1.png" }) {
+    galleryImage1: file(relativePath: { eq: "mdd/mdd-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage2: file(relativePath: { eq: "fc/fc-2.jpg" }) {
+    galleryImage2: file(relativePath: { eq: "mdd/mdd-2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage3: file(relativePath: { eq: "fc/fc-3.jpg" }) {
+    galleryImage3: file(relativePath: { eq: "mdd/mdd-3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage4: file(relativePath: { eq: "fc/fc-4.jpg" }) {
+    galleryImage4: file(relativePath: { eq: "mdd/mdd-4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage5: file(relativePath: { eq: "fc/fc-5.gif" }) {
-      publicURL
-    }
-    thumbnailPrev: file(relativePath: { eq: "thumbnails/carazo-feature.gif" }) {
+    thumbnailPrev: file(
+      relativePath: { eq: "thumbnails/fab-academy-feature.gif" }
+    ) {
       publicURL
     }
     thumbnailNext: file(
-      relativePath: { eq: "thumbnails/make-here-feature.jpg" }
+      relativePath: { eq: "thumbnails/cadigal-feature.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {

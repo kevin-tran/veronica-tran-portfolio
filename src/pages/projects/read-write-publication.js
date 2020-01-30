@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 import styles from './template.module.scss'
 
-class FabCityPage extends React.Component {
+class CadigalPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
@@ -20,20 +20,23 @@ class FabCityPage extends React.Component {
           <section className={styles.headerContainer}>
             <div className={styles.contentContainer}>
               <p>
-                <b>Fab City</b>
+                <b>READ-WRITE Publication</b>
               </p>
-              <p className={styles.subtitle}>Identity, UI/UX</p>
+              <p className={styles.subtitle}>
+                EDITORIAL, PUBLICATION, TYPOGRAPHY
+              </p>
             </div>
 
             <div className={styles.contentContainer}>
               <p>
-                <b>Assisting a community of makers and leaders</b>
+                <b>Documenting Hangar's 4th call for Research / Development</b>
               </p>
               <p>
-                Rebellious, impactful, community-focused, human, designed. Fab
-                City is an inclusive brand that stands for change, forward
-                thinking and activism. I assisted with extending their visual
-                language as well as designing a refreshed website.
+                This publication documents the results and processes of
+                READ-WRITE. READ-WRITE is an installation developed as part of
+                HANGAR’s 4th Research and Development Grant in the Interaction
+                Lab based in Barcelona, Spain. It explores the ideas within the
+                materiality of digital memory.
               </p>
             </div>
           </section>
@@ -55,31 +58,29 @@ class FabCityPage extends React.Component {
           fluid={data.galleryImage4.childImageSharp.fluid}
           className={styles.placeholder}
         />
+
         <div className={styles.imageContainer}>
           <div style={{ width: '100%', paddingBottom: '56.25%' }} />
           <img
             src={data.galleryImage5.publicURL}
             className={styles.placeholder}
-            alt="fab city gallery item 5"
           />
         </div>
 
         <div className={styles.thumbnailContainer}>
-          <Link to="/projects/carazo">
-            <p>Carazo</p>
+          <Link to="/projects/cadigal">
             <div className={styles.thumbnailItem}>
-              <div style={{ width: '100%', paddingBottom: '56.25%' }} />
-              <img
-                src={data.thumbnailPrev.publicURL}
-                className={styles.imageThumb}
-                alt="carazo thumbnail"
+              <p>Cadigal</p>
+              <Img
+                fluid={data.thumbnailPrev.childImageSharp.fluid}
+                className={styles.thumbnail}
               />
             </div>
           </Link>
 
-          <Link to="/projects/make-here">
-            <p>Make Here</p>
+          <Link to="/projects/read-write-installation">
             <div className={styles.thumbnailItem}>
+              <p>READ-WRITE Installation</p>
               <Img
                 fluid={data.thumbnailNext.childImageSharp.fluid}
                 className={styles.thumbnail}
@@ -92,46 +93,72 @@ class FabCityPage extends React.Component {
   }
 }
 
-export default FabCityPage
+export default CadigalPage
 
 export const query = graphql`
   query {
-    galleryImage1: file(relativePath: { eq: "fc/fc-1.png" }) {
+    galleryImage1: file(
+      relativePath: {
+        eq: "read-write-publication/read-write-publication-1.jpg"
+      }
+    ) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage2: file(relativePath: { eq: "fc/fc-2.jpg" }) {
+    galleryImage2: file(
+      relativePath: {
+        eq: "read-write-publication/read-write-publication-2.jpg"
+      }
+    ) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage3: file(relativePath: { eq: "fc/fc-3.jpg" }) {
+    galleryImage3: file(
+      relativePath: {
+        eq: "read-write-publication/read-write-publication-3.jpg"
+      }
+    ) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage4: file(relativePath: { eq: "fc/fc-4.jpg" }) {
+    galleryImage4: file(
+      relativePath: {
+        eq: "read-write-publication/read-write-publication-4.jpg"
+      }
+    ) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage5: file(relativePath: { eq: "fc/fc-5.gif" }) {
+    galleryImage5: file(
+      relativePath: {
+        eq: "read-write-publication/read-write-publication-5.gif"
+      }
+    ) {
       publicURL
     }
-    thumbnailPrev: file(relativePath: { eq: "thumbnails/carazo-feature.gif" }) {
-      publicURL
+    thumbnailPrev: file(
+      relativePath: { eq: "thumbnails/cadigal-feature.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 300, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
     }
     thumbnailNext: file(
-      relativePath: { eq: "thumbnails/make-here-feature.jpg" }
+      relativePath: { eq: "thumbnails/read-write-installation-feature.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {

@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 import styles from './template.module.scss'
 
-class FabCityPage extends React.Component {
+class CadigalPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
@@ -20,20 +20,21 @@ class FabCityPage extends React.Component {
           <section className={styles.headerContainer}>
             <div className={styles.contentContainer}>
               <p>
-                <b>Fab City</b>
+                <b>Sonar +D MuseIn</b>
               </p>
-              <p className={styles.subtitle}>Identity, UI/UX</p>
+              <p className={styles.subtitle}>UI/UX, BUSINESS STRATEGY</p>
             </div>
 
             <div className={styles.contentContainer}>
               <p>
-                <b>Assisting a community of makers and leaders</b>
+                <b>Designing the future of music streaming services</b>
               </p>
               <p>
-                Rebellious, impactful, community-focused, human, designed. Fab
-                City is an inclusive brand that stands for change, forward
-                thinking and activism. I assisted with extending their visual
-                language as well as designing a refreshed website.
+                Completed at the Sonar +D Innovation Challenge in collaboration
+                with Universal Music, MuseIn is a concept for the future of
+                digital music streaming that highlights transparent practices
+                and collaborative listening experiences. It proposes a strategy
+                for individual music passports and experiential music rooms.
               </p>
             </div>
           </section>
@@ -55,31 +56,29 @@ class FabCityPage extends React.Component {
           fluid={data.galleryImage4.childImageSharp.fluid}
           className={styles.placeholder}
         />
-        <div className={styles.imageContainer}>
-          <div style={{ width: '100%', paddingBottom: '56.25%' }} />
-          <img
-            src={data.galleryImage5.publicURL}
-            className={styles.placeholder}
-            alt="fab city gallery item 5"
-          />
-        </div>
+        <Img
+          fluid={data.galleryImage5.childImageSharp.fluid}
+          className={styles.placeholder}
+        />
+        <Img
+          fluid={data.galleryImage6.childImageSharp.fluid}
+          className={styles.placeholder}
+        />
 
         <div className={styles.thumbnailContainer}>
-          <Link to="/projects/carazo">
-            <p>Carazo</p>
+          <Link to="/projects/make-here">
             <div className={styles.thumbnailItem}>
-              <div style={{ width: '100%', paddingBottom: '56.25%' }} />
-              <img
-                src={data.thumbnailPrev.publicURL}
-                className={styles.imageThumb}
-                alt="carazo thumbnail"
+              <p>Make Here</p>
+              <Img
+                fluid={data.thumbnailPrev.childImageSharp.fluid}
+                className={styles.thumbnail}
               />
             </div>
           </Link>
 
-          <Link to="/projects/make-here">
-            <p>Make Here</p>
+          <Link to="/projects/mesh-archive">
             <div className={styles.thumbnailItem}>
+              <p>Mesh Archive</p>
               <Img
                 fluid={data.thumbnailNext.childImageSharp.fluid}
                 className={styles.thumbnail}
@@ -92,46 +91,63 @@ class FabCityPage extends React.Component {
   }
 }
 
-export default FabCityPage
+export default CadigalPage
 
 export const query = graphql`
   query {
-    galleryImage1: file(relativePath: { eq: "fc/fc-1.png" }) {
+    galleryImage1: file(relativePath: { eq: "sonar/sonar-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage2: file(relativePath: { eq: "fc/fc-2.jpg" }) {
+    galleryImage2: file(relativePath: { eq: "sonar/sonar-2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage3: file(relativePath: { eq: "fc/fc-3.jpg" }) {
+    galleryImage3: file(relativePath: { eq: "sonar/sonar-3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage4: file(relativePath: { eq: "fc/fc-4.jpg" }) {
+    galleryImage4: file(relativePath: { eq: "sonar/sonar-4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    galleryImage5: file(relativePath: { eq: "fc/fc-5.gif" }) {
-      publicURL
+    galleryImage5: file(relativePath: { eq: "sonar/sonar-05.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3000, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
     }
-    thumbnailPrev: file(relativePath: { eq: "thumbnails/carazo-feature.gif" }) {
-      publicURL
+    galleryImage6: file(relativePath: { eq: "sonar/sonar-06.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3000, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    thumbnailPrev: file(
+      relativePath: { eq: "thumbnails/make-here-feature.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 300, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
     }
     thumbnailNext: file(
-      relativePath: { eq: "thumbnails/make-here-feature.jpg" }
+      relativePath: { eq: "thumbnails/mesh-archive-feature.png" }
     ) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {

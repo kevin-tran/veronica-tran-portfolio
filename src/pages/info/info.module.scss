@@ -1,115 +1,116 @@
 .container {
-    padding: 1.2em;
-    display: block;
-    width: 100%;
-    padding: 4em 1.2em;
-    animation: fadeInOpacity .5s;
+  padding: 1.2em;
+  display: block;
+  width: 100%;
+  padding: 4em 1.2em;
+  animation: fadeInOpacity 0.5s;
 }
 
 .infoContainer {
-    line-height: 1.4;
-    margin-left: auto;
-    margin-bottom: 4em;
+  line-height: 1.4;
+  margin-left: auto;
+  margin-bottom: 4em;
+  max-width: 600px;
 
-    br {
-        display: none;
-    }
+  br {
+    display: none;
+  }
 }
 
 .emailContainer {
-    padding: 2em 0;
+  padding: 2em 0;
 }
 
 .table {
-    padding-top: 1em;
+  padding-top: 1em;
 
-    td {
-        line-height: 1.4;
-        display: block;
-    }
+  td {
+    line-height: 1.4;
+    display: block;
+  }
 
-    tr {
-        margin-bottom: 1.2em;
-        display: block;
-    }
+  tr {
+    margin-bottom: 1.2em;
+    display: block;
+  }
 }
 
 .socialPadding {
-    padding-bottom: .3em;
+  padding-bottom: 0.3em;
 }
 
 .socialLinks {
-    >*:first-child {
-        padding-bottom: 1em;
-    }
+  > *:first-child {
+    padding-bottom: 1em;
+  }
 }
 
 .strikethrough {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 @media only screen and (min-width: '768px') {
-    .container {
-        padding: 0 5em;
-        align-self: center;
-        display: flex;
+  .container {
+    padding: 0 5em;
+    align-self: center;
+    display: flex;
+  }
+
+  .infoContainer {
+    margin-bottom: 0;
+
+    br {
+      display: block;
+    }
+  }
+
+  .emailContainer {
+    display: none;
+  }
+
+  .table {
+    padding-top: 1em;
+
+    td:not(:first-child) {
+      padding-left: 2.2em;
     }
 
-    .infoContainer {
-        margin-bottom: 0;
-
-        br {
-            display: block;
-        }
+    td {
+      display: table-cell;
+      line-height: 1;
     }
 
-    .emailContainer {
-        display: none;
+    tr {
+      display: table-row;
+      padding-bottom: 0;
     }
-
-    .table {
-        padding-top: 1em;
-    
-        td:not(:first-child) {
-            padding-left: 2.2em;
-        }
-    
-        td {
-            display: table-cell;
-            line-height: 1;
-        }
-
-        tr {
-            display: table-row;
-            padding-bottom: 0;
-        }
-    }
+  }
 }
 
 @media only screen and (min-width: '1200px') {
-    .container {
-        padding: 0 16em;
-    }
+  .container {
+    padding: 0 16em;
+  }
 }
 
 @media only screen and (min-width: '1400px') {
-    .container {
-        padding: 0 20em;
-    }
+  .container {
+    padding: 0 20em;
+  }
 }
 
 @media only screen and (min-width: '1800px') {
-    .container {
-        padding: 0 30em 0 20em;
-        max-width: 1000px;
-    }
+  .container {
+    padding: 0 30em 0 20em;
+    max-width: 1000px;
+  }
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
