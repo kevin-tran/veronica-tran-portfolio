@@ -44,20 +44,6 @@ const InfoPage = () => (
             are.na
           </Button>
         </div>
-        <div className={styles.socialPadding}>
-          <Button
-            link="https://nveronicatran.github.io/understanding.archives/"
-            target="_blank"
-            rel="noopener"
-          >
-            Understanding Archives
-          </Button>
-        </div>
-        <div className={styles.socialPadding}>
-          <a href="/veronica-tran-cv.pdf" target="_blank" rel="noopener">
-            CV
-          </a>
-        </div>
       </Fragment>
     </div>
     <div className={styles.infoContainer}>
